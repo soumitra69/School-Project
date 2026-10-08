@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<meta content="#0B1B3D" name="theme-color"/>
+<link rel="icon" type="image/jpeg" href="Assets/school-crest.jpeg"/>
+<link rel="apple-touch-icon" href="Assets/school-crest.jpeg"/>
+<title>S. Ferrando Higher Secondary School, Samsymper | Estd. 1971 • MBOSE Affiliated</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0B1B3D",
+            "primary-container": "#132B5E",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#d7e2ff",
+            "secondary": "#D4AF37",
+            "secondary-container": "#F59E0B",
+            "secondary-fixed": "#ffdeab",
+            "on-secondary": "#1a1202",
+            "tertiary": "#1B4332",
+            "tertiary-container": "#0b2b1e",
+            "surface": "#FBFBF7",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#F4F6FB",
+            "surface-container": "#ECEFF7",
+            "surface-container-high": "#E1E6F0",
+            "on-surface": "#0E1726",
+            "on-surface-variant": "#434E61",
+            "outline": "#D0D6E2"
+          },
+          fontFamily: {
+            serif: ["Poppins", "sans-serif"],
+            display: ["Poppins", "sans-serif"],
+            sans: ["Poppins", "sans-serif"],
+            mono: ["Poppins", "sans-serif"]
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-7px)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 15px rgba(212, 175, 55, 0.3), 0 0 30px rgba(212, 175, 55, 0.15)' },
+              '50%': { boxShadow: '0 0 25px rgba(212, 175, 55, 0.65), 0 0 45px rgba(212, 175, 55, 0.3)' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' }
+            }
+          },
+          animation: {
+            floatSlow: 'floatSlow 4.5s ease-in-out infinite',
+            pulseGlow: 'pulseGlow 3s ease-in-out infinite'
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    :root { --navigation-bg: #0B1B3D; --page-progress: 0; }
+    .reading-progress { position: fixed; inset: 0 0 auto; height: 3px; z-index: 100; pointer-events: none; background: linear-gradient(90deg, #d4af37, #fef08a); transform: scaleX(var(--page-progress)); transform-origin: left; }
+    html {
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable;
+      scrollbar-color: #d4af37 #eceff7;
+      scrollbar-width: thin;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      background-color: #FBFBF7;
+      color: #0E1726;
+      margin: 0;
+      overflow-x: clip;
+    }
+    /* Apply the requested typography to all text, including controls and headings.
+       Material Symbols keep their icon font so the glyphs still render. */
+    body :not(.material-symbols-outlined) {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+    }
+    :where(main, footer) .grid > * { min-width: 0; }
+    :where(main, footer) { overflow-wrap: anywhere; }
+    [id] { scroll-margin-top: 1rem; }
+    .site-header { position: relative; z-index: 50; }
+    .utility-layout { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.375rem 1rem; }
+    .utility-links { display: flex; flex-wrap: nowrap; align-items: center; gap: 0.75rem; white-space: nowrap; flex-shrink: 0; }
+    .utility-links > * { flex-shrink: 0; }
+    .navigation-shell { background-color: var(--navigation-bg); }
+    .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .school-brand { min-width: 0; }
+    .school-brand-copy { min-width: 0; }
+    .school-motto { flex-wrap: wrap; }
+    .header-actions { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+    .header-secondary-action { display: inline-flex; align-items: center; justify-content: center; gap: 0.375rem; min-height: 44px; padding: 0.75rem 1rem; border: 1px solid rgb(212 175 55 / 65%); border-radius: 0.25rem; color: #d4af37; font-size: 12px; white-space: nowrap; transition: background-color 0.2s, transform 0.2s; }
+    .header-secondary-action:hover { background: rgb(212 175 55 / 12%); transform: translateY(-2px); }
+    @media (max-width: 1199px) {
+      .brand-row { flex-wrap: wrap; }
+      .header-actions { width: 100%; justify-content: flex-end; flex-wrap: wrap; }
+    }
+    .site-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      border-top: 1px solid rgb(255 255 255 / 12%);
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 400;
+      background-color: var(--navigation-bg);
+      animation: nav-enter 0.4s ease-out;
+    }
+    .site-navigation > .nav-link, .nav-dropdown > summary {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.75rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .site-navigation .nav-link:hover, .site-navigation .nav-link:focus-visible, .nav-dropdown[open] > summary { color: #d4af37; }
+    .site-navigation .nav-link:hover, .site-navigation .nav-link:focus-visible { transform: translateY(-2px); }
+    .site-navigation .active { color: #d4af37; }
+    .site-header :where(a, button, summary):focus-visible { outline: 2px solid #d4af37; outline-offset: 3px; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > summary { list-style: none; }
+    .nav-dropdown > summary::-webkit-details-marker { display: none; }
+    .nav-chevron { width: 0.85rem; height: 0.85rem; transition: transform 0.2s; flex-shrink: 0; }
+    .nav-dropdown[open] .nav-chevron { transform: rotate(180deg); }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 60;
+      min-width: 15rem;
+      padding: 0.5rem;
+      border: 1px solid rgb(212 175 55 / 35%);
+      border-radius: 0.5rem;
+      background: var(--navigation-bg);
+      box-shadow: 0 12px 30px rgb(0 0 0 / 25%);
+      transform-origin: top;
+    }
+    .nav-dropdown:last-child .dropdown-menu { left: auto; right: 0; }
+    .nav-dropdown[open] > .dropdown-menu { animation: dropdown-enter 0.22s ease-out; }
+    .dropdown-menu a { display: block; padding: 0.75rem; border-radius: 0.25rem; line-height: 1.5; transition: color 0.2s, transform 0.2s; }
+    .dropdown-menu a:hover, .dropdown-menu a:focus-visible { color: #d4af37; transform: translateX(4px); }
+    @keyframes nav-enter {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes dropdown-enter {
+      from { opacity: 0; transform: translateY(-6px) scaleY(0.97); }
+      to { opacity: 1; transform: translateY(0) scaleY(1); }
+    }
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgb(212 175 55 / 60%);
+      border-radius: 0.375rem;
+      color: #d4af37;
+      flex-shrink: 0;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .nav-toggle:hover { border-color: #d4af37; transform: scale(1.05); }
+    .nav-toggle svg { width: 24px; height: 24px; }
+    .nav-toggle[aria-expanded="true"] .close-icon { animation: toggle-enter 0.2s ease-out; }
+    @keyframes toggle-enter {
+      from { opacity: 0; transform: rotate(-90deg); }
+      to { opacity: 1; transform: rotate(0); }
+    }
+    .nav-toggle .close-icon, .nav-toggle[aria-expanded="true"] .menu-icon { display: none; }
+    .nav-toggle[aria-expanded="true"] .close-icon { display: block; }
+    .section-tabs { flex-wrap: wrap; }
+    .section-tabs > button { flex-shrink: 0; }
+    .floating-actions {
+      position: fixed;
+      right: max(1rem, env(safe-area-inset-right));
+      bottom: max(1rem, env(safe-area-inset-bottom));
+      z-index: 70;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.75rem;
+    }
+    .floating-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid #d4af37;
+      border-radius: 50%;
+      background: var(--navigation-bg);
+      color: #d4af37;
+      box-shadow: 0 4px 16px rgb(11 27 61 / 30%);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .floating-button:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgb(11 27 61 / 40%); }
+    .floating-button svg { width: 24px; height: 24px; transition: transform 0.25s; }
+    #back-to-top { position: relative; background: conic-gradient(#d4af37 calc(var(--page-progress) * 1turn), #334366 0); }
+    #back-to-top::before { content: ''; position: absolute; inset: 3px; border-radius: inherit; background: var(--navigation-bg); }
+    #back-to-top svg { position: relative; }
+    .floating-menu-toggle { background: #d4af37; color: var(--navigation-bg); }
+    .floating-menu-toggle[aria-expanded="true"] svg { transform: rotate(45deg); }
+    .floating-actions [hidden] { display: none; }
+    .floating-actions :where(a, button):focus-visible { outline: 2px solid #d4af37; outline-offset: 4px; }
+    .floating-navigation {
+      position: absolute;
+      right: 0;
+      bottom: calc(100% + 0.75rem);
+      width: min(260px, calc(100vw - 2rem));
+      max-height: calc(100vh - 10rem);
+      max-height: calc(100dvh - 10rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: 0.75rem;
+      border: 1px solid rgb(212 175 55 / 60%);
+      border-radius: 0.75rem;
+      background: var(--navigation-bg);
+      color: #e2e8f0;
+      box-shadow: 0 12px 36px rgb(0 0 0 / 30%);
+      animation: dropdown-enter 0.22s ease-out;
+    }
+    .floating-navigation-title { padding: 0.5rem 0.75rem 0.75rem; color: #d4af37; font-size: 13px; border-bottom: 1px solid rgb(255 255 255 / 12%); margin-bottom: 0.25rem; }
+    .floating-navigation a { display: block; padding: 0.625rem 0.75rem; min-height: 44px; border-radius: 0.375rem; font-size: 13px; transition: color 0.2s, background-color 0.2s; }
+    .floating-navigation a:hover, .floating-navigation a:focus-visible { color: #d4af37; background: rgb(255 255 255 / 6%); }
+    .floating-navigation a[aria-current="location"] { color: #d4af37; background: rgb(212 175 55 / 12%); }
+    .notice-search { display: flex; align-items: center; gap: 0.75rem; padding: 0.625rem 0.875rem; background: white; border: 1px solid #d0d6e2; border-radius: 0.5rem; }
+    .notice-search:focus-within { border-color: #d4af37; box-shadow: 0 0 0 3px rgb(212 175 55 / 15%); }
+    .notice-search input { width: 100%; min-width: 0; padding: 0.25rem 0; border: 0; background: transparent; font-size: 13px; color: #0b1b3d; }
+    .notice-search input:focus { outline: none; box-shadow: none; }
+    #notice-empty[hidden], #notice-search-tools[hidden] { display: none; }
+    @media (max-width: 1023px) {
+      .site-navigation { flex-direction: column; align-items: stretch; gap: 0.25rem; }
+      .site-header.nav-enhanced .site-navigation { display: none; }
+      .site-header.nav-enhanced .site-navigation.is-open { display: flex; animation: nav-enter 0.25s ease-out; }
+      .site-header.nav-enhanced .nav-toggle { display: inline-flex; }
+      .site-navigation > .nav-link, .nav-dropdown > summary { justify-content: space-between; min-height: 44px; }
+      .dropdown-menu { position: static; min-width: 0; margin: 0.25rem 0 0.5rem; box-shadow: none; }
+    }
+    @media (max-width: 767px) {
+      .header-actions .header-admissions { display: none; }
+    }
+    @media (max-width: 639px) {
+      .header-actions { gap: 0.5rem; }
+      .header-secondary-action { flex: 1; padding: 0.625rem 0.5rem; font-size: 11px; }
+      .header-secondary-action .material-symbols-outlined { display: none; }
+      .utility-links { gap: 0.375rem; font-size: 10px; letter-spacing: normal; }
+      .utility-links > a { font-size: inherit; }
+      .utility-links .material-symbols-outlined { font-size: 12px; }
+      .utility-links .online-fee { padding-inline: 0.375rem; letter-spacing: normal; }
+      .brand-row { gap: 0.75rem; }
+      .school-brand { gap: 0.75rem; }
+      .school-motto { font-size: 9px; letter-spacing: 0.04em; }
+      .school-motto .motto-separator { display: none; }
+      .school-motto .motto-text { flex-basis: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto !important; }
+      .site-header *, .site-header *::before, .site-header *::after { animation: none !important; transition: none !important; }
+      .floating-actions, .floating-actions * { animation: none !important; transition: none !important; }
+      .reveal-on-scroll { opacity: 1; transform: none; transition: none; }
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #d4af37 0%, #fef08a 45%, #c59b27 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4), 0 12px 30px -4px rgba(11, 27, 61, 0.25);
+    }
+    .shimmer-btn {
+      background-size: 200% auto;
+      background-image: linear-gradient(110deg, #d4af37 0%, #fef08a 25%, #d4af37 50%, #c59b27 75%, #fef08a 100%);
+      transition: background-position 0.6s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    .shimmer-btn:hover {
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+    }
+    .message-more { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.4s ease; }
+    .message-more.is-collapsed { grid-template-rows: 0fr; }
+    .message-more-inner { min-height: 0; overflow: hidden; opacity: 1; transform: translateY(0); transition: opacity 0.3s ease, transform 0.4s ease; }
+    .message-more.is-collapsed .message-more-inner { opacity: 0; transform: translateY(-8px); }
+    .message-read-more[hidden] { display: none; }
+    .message-read-more:focus-visible { outline: 2px solid #0b1b3d; outline-offset: 4px; }
+    .message-read-more .material-symbols-outlined { transition: transform 0.3s ease; }
+    .message-read-more:hover .material-symbols-outlined { transform: translateY(2px); }
+    .message-read-more[aria-expanded="true"] .material-symbols-outlined { transform: rotate(180deg); }
+    .message-read-more[aria-expanded="true"]:hover .material-symbols-outlined { transform: translateY(-2px) rotate(180deg); }
+    .interactive-card {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .interactive-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px -10px rgba(11, 27, 61, 0.12), 0 0 15px rgba(212, 175, 55, 0.25);
+    }
+    .reveal-on-scroll { transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); transition-delay: var(--reveal-delay, 0ms); }
+    .reveal-on-scroll.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    [data-counter] { font-variant-numeric: tabular-nums; }
+    #home { isolation: isolate; padding-top: 1rem; padding-bottom: 0; }
+    .hero-slideshow { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #0b1b3d; }
+    .hero-overlay { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgb(5 14 31 / 92%) 0%, rgb(11 27 61 / 76%) 42%, rgb(11 27 61 / 25%) 100%), linear-gradient(0deg, rgb(5 14 31 / 80%), transparent 55%); }
+    .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity 0.6s ease, transform 2s ease; pointer-events: none; }
+    .hero-slide.is-active { opacity: 1; transform: scale(1); }
+    .hero-photo-info { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; min-height: 430px; }
+    .hero-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem; }
+    .hero-caption { align-self: flex-end; width: min(100%, 400px); padding: 1.25rem; border-left: 2px solid #d4af37; background: rgb(11 27 61 / 60%); border-radius: 0 0.5rem 0.5rem 0; }
+    .slideshow-controls[hidden] { display: none; }
+    .slideshow-controls { position: relative; z-index: 20; margin: 0 auto; padding: 0; width: min(196px, calc(100% - 2rem)); display: flex; align-items: center; justify-content: center; }
+    .slideshow-dots { display: flex; align-items: center; justify-content: center; flex: 1; min-width: 0; }
+    .slideshow-dot { display: flex; align-items: center; justify-content: center; flex: 0 1 28px; min-width: 0; height: 44px; }
+    .slideshow-dot::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: rgb(255 255 255 / 55%); transition: background-color 0.2s, transform 0.2s; }
+    .slideshow-dot[aria-current="true"]::before { background: #d4af37; transform: scale(1.4); }
+    .slideshow-controls button:focus-visible { outline: 2px solid #d4af37; outline-offset: 2px; }
+    @media (max-width: 1023px) {
+      .hero-photo-info { min-height: 0; gap: 1rem; }
+      .hero-badges { justify-content: flex-start; }
+      .hero-caption { align-self: flex-start; width: 100%; }
+      .hero-overlay { background: linear-gradient(0deg, rgb(5 14 31 / 95%), rgb(11 27 61 / 70%) 60%, rgb(11 27 61 / 60%)); }
+    }
+    .interactive-card.reveal-on-scroll.is-revealed:hover { transform: translateY(-5px); }
+    @keyframes section-enter {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .motion-ready .reveal-on-scroll:not(.is-revealed) { opacity: 0; transform: translate(var(--reveal-x, 0px), var(--reveal-y, 28px)) scale(var(--reveal-scale, 1)); }
+      .section-animated.is-section-visible > .section-content { animation: section-enter 0.7s ease-out; }
+      .school-brand, .header-actions { animation: nav-enter 0.7s ease-out both; }
+      .header-actions { animation-delay: 0.12s; }
+      .wing-content:not(.hidden) { animation: section-enter 0.45s ease-out; }
+      #faq-accordion details[open] > div { animation: section-enter 0.3s ease-out; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body *, body *::before, body *::after { animation: none !important; transition: none !important; }
+      .hero-slideshow *, .slideshow-controls *, .slideshow-controls *::before, .section-content, .reveal-on-scroll { animation: none !important; transition: none !important; }
+      .hero-slide { transform: none; }
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      bottom: 0;
+      left: 10%;
+      background: #d4af37;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .nav-link:hover::after, .nav-link:focus-visible::after, .nav-link.active::after {
+      transform: scaleX(1);
+    }
+    details[open] summary .faq-chevron {
+      transform: rotate(180deg);
+    }
+  </style>
+<link rel="stylesheet" href="Assets/site-enhancements.css"/>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary/30 selection:text-primary">
+<div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+<!-- TOP GLOBAL SCHOOL UTILITY STRIP (KOLKATA PREMIER SCHOOL BENCHMARK) -->
+<header class="site-header shadow-md" id="site-header">
+<div class="bg-[#050e1f] text-slate-300 py-1.5 px-4 sm:px-8 text-[11px] sm:text-[12px] border-b border-white/10 tracking-wide font-medium">
+<div class="utility-layout max-w-7xl mx-auto">
+<!-- Scrolling notifications and school contact -->
+<div class="utility-left">
+<div class="notification-marquee" id="notification-marquee" role="region" aria-label="School notifications">
+<span class="notification-badge"><span class="material-symbols-outlined" aria-hidden="true">notifications_active</span><span>Updates</span></span>
+<div class="notification-viewport" aria-live="off">
+<div class="notification-track">
+<div class="notification-content">
+<a class="notification-item" href="#quick-inquiry">Admissions 2026&ndash;27: Enquire now.</a><span class="notification-separator" aria-hidden="true">&bull;</span>
+<a class="notification-item" href="#academic-pathways">Science &amp; Arts: Explore your path.</a><span class="notification-separator" aria-hidden="true">&bull;</span>
+<a class="notification-item" href="#notice-board-section">School notices: View latest circulars.</a><span class="notification-separator" aria-hidden="true">&bull;</span>
+</div>
+</div>
+</div>
+</div>
+<span class="utility-phone text-white/90">
+<span class="material-symbols-outlined text-[14px] text-[#d4af37]">call</span>
+          +91 94361 02844 / 0364-220000
+        </span>
+</div>
+<!-- Right: Portals & Hotlines -->
+<div class="utility-links text-[11px] sm:text-[12px]">
+<a class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition-all" href="https://wa.me/919436102844" target="_blank" aria-label="WhatsApp Desk">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span class="hidden sm:inline">WhatsApp Desk</span>
+</a>
+<span class="text-white/20">•</span>
+<a class="hover:text-[#d4af37] transition-all flex items-center gap-1 text-slate-200" href="#student-portal">
+<span class="material-symbols-outlined text-[14px] text-[#d4af37]">badge</span>
+<span>Parent &amp; Student Portal</span>
+<span class="hidden xl:inline text-[9px] bg-emerald-500/20 text-emerald-300 px-1 rounded border border-emerald-400/30">E-Diary</span>
+</a>
+<span class="text-white/20">•</span>
+<a class="online-fee bg-gradient-to-r from-[#c59b27] to-[#d4af37] text-[#0B1B3D] font-bold px-2.5 py-0.5 rounded shadow hover:brightness-110 hover:scale-105 transition-all flex items-center gap-1 text-[10px] uppercase tracking-wider" href="#quick-inquiry">
+<span class="material-symbols-outlined text-[13px]">payments</span>
+          Online Fee
+        </a>
+</div>
+</div>
+</div>
+<!-- MAIN PRESTIGIOUS LOGO & NAVIGATION BAR -->
+<div class="navigation-shell text-white px-4 sm:px-8 border-b border-[#d4af37]/35 shadow-lg">
+<div class="max-w-7xl mx-auto">
+<div class="brand-row py-4">
+<!-- School Identity -->
+<a class="school-brand flex items-center gap-3.5 group" href="#home">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white p-1 ring-2 ring-[#d4af37] shadow-[0_0_15px_rgba(212,175,55,0.4)] group-hover:scale-105 group-hover:rotate-3 transition-transform duration-500 overflow-hidden flex items-center justify-center animate-floatSlow">
+<img alt="S. Ferrando Hr. Sec. School Crest" class="w-full h-full object-contain" src="Assets/school-crest.jpeg"/>
+</div>
+<span class="absolute -bottom-1 -right-1 bg-[#1B4332] text-[#d4af37] text-[9px] font-black uppercase px-1.5 py-0.2 rounded-full border border-[#d4af37]/50 shadow-sm animate-pulse">
+            1971
+          </span>
+</div>
+<div class="school-brand-copy flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-[16px] sm:text-[21px] font-serif font-bold tracking-tight text-white group-hover:text-amber-200 transition-colors uppercase leading-none">
+              S. Ferrando Hr. Sec. School
+            </span>
+</div>
+<div class="school-motto flex items-center gap-1.5 text-[10px] sm:text-[12px] font-semibold text-[#d4af37] uppercase tracking-widest mt-1">
+<span>Samsymper, Meghalaya</span>
+<span class="motto-separator text-white/40">•</span>
+<span class="motto-text italic font-serif normal-case tracking-normal text-amber-200 font-semibold">“Ever Better” (Semper Melius)</span>
+</div>
+<span class="text-[10px] text-slate-300 font-medium tracking-tight hidden sm:block">
+            Premier K-12 Heritage Catholic Institution • Managed by MSMHC Society
+          </span>
+</div>
+</a>
+<div class="header-actions">
+<a class="header-secondary-action" href="#visit-section">
+<span class="material-symbols-outlined text-[16px]" aria-hidden="true">calendar_month</span>
+<span>Plan a Campus Visit</span>
+</a>
+<a class="header-secondary-action" href="#prospectus">
+<span class="material-symbols-outlined text-[16px]" aria-hidden="true">description</span>
+<span>Prospectus</span>
+</a>
+<a class="header-admissions shimmer-btn inline-flex items-center gap-1.5 px-4 py-3 rounded text-[12px] font-bold text-[#0B1B3D] shadow-[0_0_18px_rgba(212,175,55,0.4)]" href="#admission-steps">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span class="tracking-wide uppercase">Admissions 2026</span>
+</a>
+<button class="nav-toggle" id="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation">
+<svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+<svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>
+</button>
+</div>
+</div>
+<!-- Responsive navigation with native, keyboard-accessible dropdowns -->
+<nav class="site-navigation" id="primary-navigation" aria-label="Main navigation">
+<a class="nav-link" href="#home" aria-current="location">Home</a>
+<details class="nav-dropdown">
+<summary class="nav-link">About <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#about-section">About School</a><a href="#mission-vision-section">Mission &amp; Vision</a><a href="#why-ferrando">Why S. Ferrando</a><a href="#campus-visit-geo">Our Location</a></div>
+</details>
+<details class="nav-dropdown">
+<summary class="nav-link">Wings (K-12) <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#wings-section" data-wing="pre-primary">Pre-Primary &amp; Kindergarten</a><a href="#wings-section" data-wing="primary">Primary (Classes I–V)</a><a href="#wings-section" data-wing="middle">Middle School (VI–VIII)</a><a href="#wings-section" data-wing="senior">Secondary &amp; Senior School</a><a href="#academic-pathways">Science &amp; Arts Pathways</a></div>
+</details>
+<details class="nav-dropdown">
+<summary class="nav-link">Leadership <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#principal-message">Principal's Message</a><a href="#vice-president-section">Vice President's Message</a><a href="#chairman-section">Chairman's Message</a></div>
+</details>
+<details class="nav-dropdown">
+<summary class="nav-link">Notice Board <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#notice-board-section" data-notice="all">All Circulars</a><a href="#notice-board-section" data-notice="admissions">Admission Notices</a><a href="#notice-board-section" data-notice="mbose">MBOSE Updates</a><a href="#notice-board-section" data-notice="events">School Events</a><a href="#notice-board-section" data-notice="eco">Eco-Club News</a></div>
+</details>
+<details class="nav-dropdown">
+<summary class="nav-link">Campus Life <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#campus-life-bento">School Highlights</a><a href="#gallery-section">Photo Gallery</a><a href="#facilities-section">Campus Facilities</a></div>
+</details>
+<details class="nav-dropdown">
+<summary class="nav-link">Facilities <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#facilities-section">Campus Facilities</a><a href="#science-labs">Science Laboratories</a><a href="#school-library">School Library</a><a href="#school-transport">School Transport</a><a href="#drinking-water">Drinking Water</a><a href="#first-aid">Medical &amp; First Aid</a><a href="#sports-pavilion">Sports &amp; Playground</a></div>
+</details>
+<details class="nav-dropdown">
+<summary class="nav-link">Admissions <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#admission-steps">Admission Process</a><a href="#quick-inquiry">Admission Enquiry</a><a href="#faq-accordion">Admission FAQs</a><a href="#student-portal">Parent &amp; Student Information</a><a href="#resources-section">Family Resource Centre</a></div>
+</details>
+<details class="nav-dropdown">
+<summary class="nav-link">Contact <svg class="nav-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary>
+<div class="dropdown-menu"><a href="#campus-visit-geo">School Contact</a><a href="#visit-section">Plan a Campus Visit</a><a href="#campus-contact">School Contact Details</a><a href="#office-hours">Office Hours</a><a href="#quick-inquiry">Admission Enquiry</a></div>
+</details>
+</nav>
+</div>
+</div>
+</header>
+<main>
+<!-- SECTION 1: HERO - ICONIC SCHOLASTIC SHOWCASE -->
+<section class="relative bg-gradient-to-b from-[#0B1B3D] via-[#10244D] to-[#132B5E] text-white overflow-hidden border-b-4 border-[#d4af37] px-4 sm:px-8" id="home">
+<!-- Full-width photo background fills the entire hero banner. -->
+<div class="hero-slideshow" id="hero-slideshow" role="region" aria-roledescription="carousel" aria-label="School photos">
+<img class="hero-slide is-active" src="Assets/school-community.jpeg" alt="School scholars gathered in uniform outside the main school building" data-title="Higher Secondary Science &amp; Arts Cohort" data-badge="School Community" data-caption="Main School Portico • Samsymper" fetchpriority="high" decoding="async" aria-hidden="false"/>
+<img class="hero-slide" src="Assets/morning-assembly.jpeg" alt="Students from all four houses gathering for morning assembly" data-title="Together for Every New Day" data-badge="Morning Assembly" data-caption="School Courtyard • Samsymper" decoding="async" aria-hidden="true"/>
+<img class="hero-slide" src="Assets/students-together.jpeg" alt="School students holding tree saplings during an eco-club activity" data-title="Growing a Greener Tomorrow" data-badge="Eco-Club in Action" data-caption="Khasi Hills • Student Stewardship" decoding="async" aria-hidden="true"/>
+<img class="hero-slide" src="Assets/outdoor-learning.jpeg" alt="Students working together on an outdoor planting activity" data-title="Learning Beyond the Classroom" data-badge="Hands-On Learning" data-caption="School Grounds • Outdoor Learning" decoding="async" aria-hidden="true"/>
+<img class="hero-slide" src="Assets/classroom-community.jpeg" alt="Students and educators celebrating together in a classroom" data-title="Celebrating Our School Community" data-badge="Classroom Connections" data-caption="Shared Moments • School Life" decoding="async" aria-hidden="true"/>
+<img class="hero-slide" src="Assets/student-awareness.jpeg" alt="Students holding signs promoting a tobacco-free community" data-title="Young Voices for a Healthy Future" data-badge="Student Awareness" data-caption="Student Action • Community Well-Being" decoding="async" aria-hidden="true"/>
+<img class="hero-slide" src="Assets/community-visit.jpeg" alt="Community members gathered beside a river and bridge" data-title="Building Connections Beyond Campus" data-badge="Community Connections" data-caption="Khasi Hills • Community Visit" decoding="async" aria-hidden="true"/>
+</div>
+<div class="hero-overlay"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center hero-main-grid">
+<div class="lg:col-span-7 flex flex-col gap-5 reveal-on-scroll hero-copy">
+<p class="hero-eyebrow">S. Ferrando, Samsymper <span aria-hidden="true">&middot;</span> Since 1971</p>
+<h1 class="hero-heading">A place to learn.<br/><span>A future to shape.</span></h1>
+<p class="hero-intro">From first discoveries to higher secondary education, we nurture curious minds, kind hearts, and the confidence to be ever better.</p>
+<div class="flex flex-wrap items-center gap-3 mt-1">
+<a class="school-button gold shimmer-btn" href="#admission-steps">Explore admissions <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+<a class="school-button outlined" href="#campus-life-bento"><span class="material-symbols-outlined" aria-hidden="true">photo_library</span> Discover school life</a>
+</div>
+<div class="hero-stats">
+<div><span class="hero-stat-value" data-counter="55" data-counter-suffix="+">55+</span><span class="hero-stat-label">Years of learning</span></div>
+<div><span class="hero-stat-value">K&ndash;12</span><span class="hero-stat-label">One learning journey</span></div>
+<div><span class="hero-stat-value">MBOSE</span><span class="hero-stat-label">Affiliated curriculum</span></div>
+</div>
+</div>
+<!-- School badges and photo captions remain above the full-width background. -->
+<div class="hero-photo-info lg:col-span-5 reveal-on-scroll delay-200">
+<!-- Floating Top Badges -->
+<div class="hero-badges">
+<div class="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 flex items-center gap-1.5 text-[11px] text-white font-semibold">
+<span class="material-symbols-outlined text-[15px] text-[#d4af37]">verified</span>
+<span>MBOSE Board Affiliated</span>
+</div>
+<div class="bg-[#1B4332]/90 backdrop-blur-md px-3 py-1 rounded-full border border-emerald-400/30 flex items-center gap-1 text-[11px] text-emerald-200 font-bold">
+<span class="material-symbols-outlined text-[14px]">diversity_3</span>
+<span>Co-Educational Excellence</span>
+</div>
+</div>
+<!-- Bottom Details Card -->
+<div class="hero-caption text-white">
+<div class="inline-flex items-center gap-1 bg-[#d4af37] text-[#0B1B3D] text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-wider mb-1.5 shadow" id="slideshow-badge">
+                  School Community
+                </div>
+<h3 class="text-xl sm:text-2xl font-serif font-bold leading-snug text-white" id="slideshow-title">
+                  Higher Secondary Science &amp; Arts Cohort
+                </h3>
+<p class="text-xs text-slate-300 font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-[#d4af37]">pin_drop</span>
+<span id="slideshow-caption">Main School Portico • Samsymper</span>
+                </p>
+</div>
+<!-- End of banner content grid -->
+</div>
+</div>
+</div>
+<div class="slideshow-controls" id="slideshow-controls" hidden>
+<div class="slideshow-dots" role="group" aria-label="Choose a photo">
+<button class="slideshow-dot" type="button" data-slide="0" aria-label="Show school community photo" aria-current="true"></button>
+<button class="slideshow-dot" type="button" data-slide="1" aria-label="Show morning assembly photo" aria-current="false"></button>
+<button class="slideshow-dot" type="button" data-slide="2" aria-label="Show eco-club photo" aria-current="false"></button>
+<button class="slideshow-dot" type="button" data-slide="3" aria-label="Show outdoor learning photo" aria-current="false"></button>
+<button class="slideshow-dot" type="button" data-slide="4" aria-label="Show classroom community photo" aria-current="false"></button>
+<button class="slideshow-dot" type="button" data-slide="5" aria-label="Show student awareness photo" aria-current="false"></button>
+<button class="slideshow-dot" type="button" data-slide="6" aria-label="Show community visit photo" aria-current="false"></button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: STATUTORY COMPLIANCE & ACCREDITATION STRIP -->
+<section class="compliance-strip bg-[#ECEFF7] border-b border-stone-300 py-3.5 px-4 sm:px-8" aria-label="Institutional affiliations">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#D4AF37] text-[20px]" aria-hidden="true">workspace_premium</span>
+<span class="text-[11px] sm:text-[12px] font-bold uppercase tracking-wider text-slate-700">
+          Institutional Affiliations &amp; Compliance Standards:
+        </span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 w-full md:w-auto text-[11px]">
+<div class="bg-white px-3 py-1.5 rounded border border-slate-300 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[#0B1B3D] text-[16px]">school</span>
+<div><strong class="text-[#0B1B3D] block">MBOSE</strong><span class="text-slate-500">Code HS-2104</span></div>
+</div>
+<div class="bg-white px-3 py-1.5 rounded border border-slate-300 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[#0B1B3D] text-[16px]">account_balance</span>
+<div><strong class="text-[#0B1B3D] block">DSEL Meghalaya</strong><span class="text-slate-500">Dept. of School Ed.</span></div>
+</div>
+<div class="bg-white px-3 py-1.5 rounded border border-slate-300 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[#D4AF37] text-[16px]">church</span>
+<div><strong class="text-[#0B1B3D] block">MSMHC Trust</strong><span class="text-slate-500">S. Ferrando Society</span></div>
+</div>
+<div class="bg-white px-3 py-1.5 rounded border border-slate-300 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-700 text-[16px]">eco</span>
+<div><strong class="text-emerald-800 block">NGC Eco-Club</strong><span class="text-slate-500">Chapter ML-14</span></div>
+</div>
+<div class="bg-white px-3 py-1.5 rounded border border-slate-300 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-red-600 text-[16px]">medical_services</span>
+<div><strong class="text-slate-900 block">Junior Red Cross</strong><span class="text-slate-500">Health Cadet Unit</span></div>
+</div>
+<div class="bg-white px-3 py-1.5 rounded border border-slate-300 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[#0B1B3D] text-[16px]">database</span>
+<div><strong class="text-[#0B1B3D] block">UDISE+</strong><span class="text-slate-500">17040201001</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT SCHOOL: immediately below affiliations and compliance standards. -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-surface" id="about-section" aria-labelledby="about-heading">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+<div class="reveal-on-scroll">
+<span class="text-xs uppercase tracking-widest text-[#c59b27] flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]" aria-hidden="true">school</span>Our School, Our Community</span>
+<h2 class="text-3xl sm:text-4xl text-[#0B1B3D] mt-2" id="about-heading">About School</h2>
+<p class="text-lg text-[#0B1B3D] mt-4">S. Ferrando Higher Secondary School, Samsymper</p>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">Established in 1971, our school serves the community of Samsymper in the South West Khasi Hills of Meghalaya. Guided by the Missionary Sisters of Mary Help of Christians (MSMHC), we bring together academic learning, character formation, and service to the community.</p>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">From the early years to higher secondary education, we encourage students to learn with curiosity, act with compassion, and take pride in their heritage. Our motto, &ldquo;Ever Better&rdquo; (Semper Melius), inspires us to keep growing together.</p>
+<div class="flex flex-wrap gap-3 mt-6 text-xs text-[#0B1B3D]">
+<span class="bg-white border border-slate-200 rounded-full px-4 py-2">Established 1971</span>
+<span class="bg-white border border-slate-200 rounded-full px-4 py-2">MBOSE Affiliated</span>
+<span class="bg-white border border-slate-200 rounded-full px-4 py-2">Pre-Primary to Class XII</span>
+</div>
+<a class="school-button action-button mt-6" href="#mission-vision-section">Discover our mission &amp; vision <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
+</div>
+<figure class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg reveal-on-scroll delay-100">
+<img src="Assets/school-community.jpeg" alt="Students and the S. Ferrando school community" class="w-full h-72 sm:h-96 object-cover" loading="lazy" decoding="async"/>
+<figcaption class="bg-[#0B1B3D] text-white px-6 py-4 text-sm"><span class="text-[#D4AF37] block text-xs uppercase tracking-wider mb-1">Ever Better</span>A community where learning, values, and belonging grow together.</figcaption>
+</figure>
+</div>
+</section>
+<!-- MISSION AND VISION -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-[#F4F6FB] border-y border-slate-300" id="mission-vision-section" aria-labelledby="mission-vision-heading">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-10 reveal-on-scroll">
+<span class="text-xs uppercase tracking-widest text-[#c59b27]">The Purpose That Guides Us</span>
+<h2 class="text-3xl sm:text-4xl text-[#0B1B3D] mt-2" id="mission-vision-heading">Mission &amp; Vision</h2>
+<p class="text-sm sm:text-base text-slate-600 mt-3">Learning with purpose. Growing with values. Serving with compassion.</p>
+</div>
+<!-- Draft institutional copy; replace with the school's approved wording when available. -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<article class="interactive-card bg-white p-6 sm:p-8 rounded-2xl border-t-4 border-[#D4AF37] shadow-sm">
+<span class="material-symbols-outlined text-[#c59b27] text-[36px] mb-4" aria-hidden="true">flag</span>
+<h3 class="text-2xl text-[#0B1B3D]">Our Mission</h3>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">To provide a caring and inclusive education that develops knowledge, character, and practical skills. We encourage every student to think independently, respect others, care for the environment, and contribute to the wider community.</p>
+</article>
+<article class="interactive-card bg-[#0B1B3D] p-6 sm:p-8 rounded-2xl border-t-4 border-[#D4AF37] shadow-sm">
+<span class="material-symbols-outlined text-[#D4AF37] text-[36px] mb-4" aria-hidden="true">visibility</span>
+<h3 class="text-2xl text-white">Our Vision</h3>
+<p class="text-sm sm:text-base text-slate-300 leading-relaxed mt-4">To nurture confident, compassionate, and responsible young people who pursue excellence throughout life. We envision a school community rooted in faith, respect for local heritage, and a shared commitment to a more just and sustainable world.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- PRINCIPAL'S MESSAGE -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-surface" id="principal-message" aria-labelledby="principal-heading">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-[minmax(0,240px)_minmax(0,1fr)] lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-6 lg:gap-10 items-center bg-white rounded-2xl border border-slate-200 p-5 sm:p-8 lg:p-10 shadow-sm">
+<figure class="w-full max-w-sm mx-auto md:mx-0 rounded-xl overflow-hidden border border-[#D4AF37]/40 bg-[#F4F6FB] shadow-sm reveal-on-scroll">
+<img src="Assets/principal-placeholder.jpg" alt="Sample portrait for the Principal's Message" class="w-full aspect-[6/7] object-cover" width="600" height="700" loading="lazy" decoding="async"/>
+<figcaption class="px-4 py-2 text-[11px] text-slate-500">Sample photo &middot; Principal</figcaption>
+</figure>
+<article class="min-w-0 reveal-on-scroll delay-100">
+<header class="border-b border-slate-200 pb-5 mb-5">
+<span class="text-xs uppercase tracking-widest text-[#c59b27]">From the Principal's Desk</span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl text-[#0B1B3D] mt-2" id="principal-heading">Principal's Message</h2>
+<p class="text-sm text-slate-600 leading-relaxed mt-4">Inspiring learning, nurturing character, and supporting every student's growth.</p>
+</header>
+<span class="material-symbols-outlined text-[#D4AF37] text-[40px]" aria-hidden="true">format_quote</span>
+<blockquote class="text-base sm:text-lg text-[#0B1B3D] leading-relaxed mt-3 border-l-2 border-[#D4AF37] pl-5">&ldquo;Education at S. Ferrando is never mere mechanical preparation for certificates; it is the holy formation of character, moral judgment, and courageous social stewardship in the hills of Meghalaya.&rdquo;</blockquote>
+<div class="message-more" id="principal-full-message">
+<div class="message-more-inner">
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-5">Our school community grows through the shared efforts of students, teachers, and families. Together, we encourage curiosity, discipline, kindness, and the confidence to keep learning.</p>
+<div class="border-t border-slate-200 pt-5 mt-6"><p class="text-sm text-[#0B1B3D]">Office of the Principal</p><p class="text-xs text-slate-500 mt-1">S. Ferrando Higher Secondary School, Samsymper</p></div>
+</div>
+</div>
+<button class="message-read-more shimmer-btn inline-flex items-center justify-center gap-2 mt-5 px-5 py-3 min-h-[44px] rounded-full text-sm text-[#0B1B3D] shadow-sm" type="button" aria-expanded="true" aria-controls="principal-full-message" aria-label="Read less of the Principal's Message" hidden><span data-message-label>Read Less</span><span class="material-symbols-outlined text-[20px]" aria-hidden="true">expand_more</span></button>
+</article>
+</div>
+</div>
+</section>
+<!-- VICE PRESIDENT'S MESSAGE: draft copy pending the office's approved message. -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-[#F4F6FB] border-y border-slate-300" id="vice-president-section" aria-labelledby="vice-president-heading">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-[minmax(0,240px)_minmax(0,1fr)] lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-6 lg:gap-10 items-center bg-white rounded-2xl border border-slate-200 p-5 sm:p-8 lg:p-10 shadow-sm">
+<figure class="w-full max-w-sm mx-auto md:mx-0 rounded-xl overflow-hidden border border-[#D4AF37]/40 bg-[#F4F6FB] shadow-sm reveal-on-scroll">
+<img src="Assets/vice-president-placeholder.jpg" alt="Sample portrait for the Vice President's Message" class="w-full aspect-[6/7] object-cover" width="600" height="700" loading="lazy" decoding="async"/>
+<figcaption class="px-4 py-2 text-[11px] text-slate-500">Sample photo &middot; Vice President</figcaption>
+</figure>
+<article class="min-w-0 reveal-on-scroll delay-100">
+<header class="border-b border-slate-200 pb-5 mb-5">
+<span class="text-xs uppercase tracking-widest text-[#c59b27]">Working Together for Our Students</span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl text-[#0B1B3D] mt-2" id="vice-president-heading">Vice President's Message</h2>
+<p class="text-sm text-slate-600 leading-relaxed mt-4">Strengthening the partnership between school, families, and our community.</p>
+</header>
+<h3 class="text-xl text-[#0B1B3D]">Growing stronger together</h3>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">A meaningful education is built on trust and cooperation. At S. Ferrando, we value the partnership between teachers, parents, and students, and the everyday care that helps each child feel supported.</p>
+<div class="message-more" id="vice-president-full-message">
+<div class="message-more-inner">
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">Our shared responsibility is to create opportunities for learning and participation, celebrate effort, and encourage respect for others. May we continue to work together in the spirit of our motto, &ldquo;Ever Better.&rdquo;</p>
+<div class="border-t border-slate-200 pt-5 mt-6"><p class="text-sm text-[#0B1B3D]">Office of the Vice President</p><p class="text-xs text-slate-500 mt-1">S. Ferrando Higher Secondary School, Samsymper</p></div>
+</div>
+</div>
+<button class="message-read-more shimmer-btn inline-flex items-center justify-center gap-2 mt-5 px-5 py-3 min-h-[44px] rounded-full text-sm text-[#0B1B3D] shadow-sm" type="button" aria-expanded="true" aria-controls="vice-president-full-message" aria-label="Read less of the Vice President's Message" hidden><span data-message-label>Read Less</span><span class="material-symbols-outlined text-[20px]" aria-hidden="true">expand_more</span></button>
+</article>
+</div>
+</div>
+</section>
+<!-- CHAIRMAN'S MESSAGE: draft copy pending the office's approved message. -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-surface" id="chairman-section" aria-labelledby="chairman-heading">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-[minmax(0,240px)_minmax(0,1fr)] lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] gap-6 lg:gap-10 items-center bg-white rounded-2xl border border-slate-200 p-5 sm:p-8 lg:p-10 shadow-sm">
+<figure class="w-full max-w-sm mx-auto md:mx-0 rounded-xl overflow-hidden border border-[#D4AF37]/40 bg-[#F4F6FB] shadow-sm reveal-on-scroll">
+<img src="Assets/chairman-placeholder.jpg" alt="Sample portrait for the Chairman's Message" class="w-full aspect-[6/7] object-cover" width="600" height="700" loading="lazy" decoding="async"/>
+<figcaption class="px-4 py-2 text-[11px] text-slate-500">Sample photo &middot; Chairman</figcaption>
+</figure>
+<article class="min-w-0 reveal-on-scroll delay-100">
+<header class="border-b border-slate-200 pb-5 mb-5">
+<span class="text-xs uppercase tracking-widest text-[#c59b27]">Guided by Values, Looking Ahead</span>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl text-[#0B1B3D] mt-2" id="chairman-heading">Chairman's Message</h2>
+<p class="text-sm text-slate-600 leading-relaxed mt-4">Honouring our educational heritage while supporting the next generation.</p>
+</header>
+<h3 class="text-xl text-[#0B1B3D]">A shared commitment to education</h3>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">The strength of a school lies in the values it lives each day. Our commitment is to support an education that balances academic achievement with integrity, compassion, and service.</p>
+<div class="message-more" id="chairman-full-message">
+<div class="message-more-inner">
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">As S. Ferrando continues its journey, we seek to preserve its community spirit and encourage thoughtful growth. We appreciate the dedication of our staff, the trust of our families, and the enthusiasm of our students in shaping the school's future.</p>
+<div class="border-t border-slate-200 pt-5 mt-6"><p class="text-sm text-[#0B1B3D]">Office of the Chairman</p><p class="text-xs text-slate-500 mt-1">S. Ferrando Higher Secondary School, Samsymper</p></div>
+</div>
+</div>
+<button class="message-read-more shimmer-btn inline-flex items-center justify-center gap-2 mt-5 px-5 py-3 min-h-[44px] rounded-full text-sm text-[#0B1B3D] shadow-sm" type="button" aria-expanded="true" aria-controls="chairman-full-message" aria-label="Read less of the Chairman's Message" hidden><span data-message-label>Read Less</span><span class="material-symbols-outlined text-[20px]" aria-hidden="true">expand_more</span></button>
+</article>
+</div>
+</div>
+</section>
+<section class="school-section why-section" id="why-ferrando" aria-labelledby="why-heading">
+<div class="school-container max-w-7xl">
+<div class="section-heading reveal-on-scroll"><span class="section-kicker">The Ferrandian experience</span><h2 class="section-title" id="why-heading">Room to discover.<br/>Space to become.</h2><p class="section-description">A good education opens minds. A caring school helps every student find their place.</p></div>
+<div class="value-grid">
+<article class="value-card interactive-card"><span class="material-symbols-outlined" aria-hidden="true">auto_stories</span><h3>A love of learning</h3><p>Curiosity, classroom discovery, and a steady foundation for the next stage of education.</p></article>
+<article class="value-card interactive-card"><span class="material-symbols-outlined" aria-hidden="true">favorite</span><h3>Values for life</h3><p>Faith, kindness, respect, and the everyday choices that help build good character.</p></article>
+<article class="value-card interactive-card"><span class="material-symbols-outlined" aria-hidden="true">diversity_3</span><h3>A sense of belonging</h3><p>Students, educators, and families growing together with pride in our local heritage.</p></article>
+<article class="value-card interactive-card"><span class="material-symbols-outlined" aria-hidden="true">eco</span><h3>Learning by doing</h3><p>Outdoor experiences and community activities that bring lessons beyond the classroom.</p></article>
+</div>
+</div>
+</section>
+<!-- ACADEMIC WINGS -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-surface" id="wings-section">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-10 reveal-on-scroll">
+<span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37] flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+          Every stage, thoughtfully supported
+        </span>
+<h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#0B1B3D] mt-1.5">
+          The Four Wings of Learning (K–12)
+        </h2>
+<p class="text-slate-600 text-xs sm:text-base mt-2">
+          From joyful first discoveries to confident preparation for higher education, explore every stage of our K-12 learning journey.
+        </p>
+</div>
+<!-- Interactive Wing Tabs -->
+<div class="section-tabs flex items-center justify-center gap-2 pb-4 mb-8">
+<button class="wing-tab-btn active px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-[#0B1B3D] text-white shadow" data-target="pre-primary" onclick="switchWing('pre-primary')">
+          1. Pre-Primary &amp; Foundation
+        </button>
+<button class="wing-tab-btn px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-300" data-target="primary" onclick="switchWing('primary')">
+          2. Primary Wing (Classes I–V)
+        </button>
+<button class="wing-tab-btn px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-300" data-target="middle" onclick="switchWing('middle')">
+          3. Middle School (VI–VIII)
+        </button>
+<button class="wing-tab-btn px-4 py-2.5 rounded-full text-xs font-bold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-300" data-target="senior" onclick="switchWing('senior')">
+          4. Higher Secondary (IX–XII)
+        </button>
+</div>
+<!-- Tab Content 1: Pre-Primary -->
+<div class="wing-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-sm" id="pre-primary">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 uppercase tracking-wider bg-amber-50 px-3 py-1 rounded w-fit border border-amber-200">
+<span class="material-symbols-outlined text-[16px]">child_care</span> Nursery, LKG &amp; UKG
+          </div>
+<h3 class="text-2xl sm:text-3xl font-serif font-bold text-[#0B1B3D]">
+            Little discoveries. Big beginnings.
+          </h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+            Cultivating innate curiosity through sensory exploration, Khasi &amp; English phonetics, rhythm, storytelling, and Christian virtue. Our gentle environment eases first-time learners into collaborative social habits with dedicated mother-care teacher sisters.
+          </p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Phonemic Literacy &amp; Number Play</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Storytelling &amp; Character Parables</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Nature Walks on Pine Ridges</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Secure Early Childhood Play Pen</li>
+</ul>
+<div class="pt-2">
+<a class="school-button action-button" href="#admission-steps">
+              Nursery Age Criteria &amp; Registration <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-6 relative rounded-xl overflow-hidden h-72 sm:h-80 shadow-md">
+<img alt="Interactive concept learning in school classroom" class="w-full h-full object-cover" src="Assets/classroom.jpeg" loading="lazy" decoding="async"/>
+<div class="absolute bottom-3 left-3 bg-[#0B1B3D]/80 backdrop-blur-sm text-white px-3 py-1 rounded text-xs">
+            Safe, Loving Mentorship by MSMHC Sisters
+          </div>
+</div>
+</div>
+<!-- Tab Content 2: Primary Wing (hidden by default) -->
+<div class="wing-content hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-sm" id="primary">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded w-fit border border-emerald-200">
+<span class="material-symbols-outlined text-[16px]">menu_book</span> Classes I to V
+          </div>
+<h3 class="text-2xl sm:text-3xl font-serif font-bold text-[#0B1B3D]">
+            Building strong foundations
+          </h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+            Aligned with National Education Policy (NEP 2020) guidelines, emphasizing dual-language fluency in English and Khasi, mental arithmetic, nature journaling, and participatory performing arts.
+          </p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-emerald-700">check_circle</span> Daily Reading &amp; Cursive Handwriting</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-emerald-700">check_circle</span> Environmental Studies (EVS)</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-emerald-700">check_circle</span> Moral Science &amp; Catechesis</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-emerald-700">check_circle</span> Physical Education &amp; Calisthenics</li>
+</ul>
+</div>
+<div class="lg:col-span-6 relative rounded-xl overflow-hidden h-72 sm:h-80 shadow-md">
+<img alt="Morning assembly quadrangle discipline" class="w-full h-full object-cover" src="Assets/morning-assembly.jpeg" loading="lazy" decoding="async"/>
+<div class="absolute bottom-3 left-3 bg-[#0B1B3D]/80 backdrop-blur-sm text-white px-3 py-1 rounded text-xs">
+            Morning Assembly &amp; Moral Instruction
+          </div>
+</div>
+</div>
+<!-- Tab Content 3: Middle School (hidden by default) -->
+<div class="wing-content hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-sm" id="middle">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-800 uppercase tracking-wider bg-blue-50 px-3 py-1 rounded w-fit border border-blue-200">
+<span class="material-symbols-outlined text-[16px]">biotechnology</span> Classes VI to VIII
+          </div>
+<h3 class="text-2xl sm:text-3xl font-serif font-bold text-[#0B1B3D]">
+            New subjects. Wider horizons.
+          </h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+            Transitioning scholars into specialized disciplines: Physics, Chemistry, Biology, Algebraic Mathematics, Social Sciences, Computer Applications, and induction into the Four House fraternity.
+          </p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#0B1B3D]">check_circle</span> Science Laboratory Hand-Skills</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#0B1B3D]">check_circle</span> Debate, Elocution &amp; Quiz Clubs</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#0B1B3D]">check_circle</span> National Green Corps (Eco-Club)</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#0B1B3D]">check_circle</span> Inter-House Athletics Leagues</li>
+</ul>
+</div>
+<div class="lg:col-span-6 relative rounded-xl overflow-hidden h-72 sm:h-80 shadow-md">
+<img alt="Eco club soil and saplings preparation" class="w-full h-full object-cover" src="Assets/outdoor-learning.jpeg" loading="lazy" decoding="async"/>
+<div class="absolute bottom-3 left-3 bg-[#0B1B3D]/80 backdrop-blur-sm text-white px-3 py-1 rounded text-xs">
+            Experiential Field &amp; Eco Education
+          </div>
+</div>
+</div>
+<!-- Tab Content 4: Senior Secondary (hidden by default) -->
+<div class="wing-content hidden grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-sm" id="senior">
+<div class="lg:col-span-6 flex flex-col gap-4">
+<div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c59b27] uppercase tracking-wider bg-amber-50 px-3 py-1 rounded w-fit border border-amber-300">
+<span class="material-symbols-outlined text-[16px]">school</span> Classes IX to XII (MBOSE Board)
+          </div>
+<h3 class="text-2xl sm:text-3xl font-serif font-bold text-[#0B1B3D]">
+            MBOSE SSLC &amp; Higher Secondary Science &amp; Arts
+          </h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+            Preparing students for MBOSE examinations and their next step through focused study in Science and Arts, subject exploration, and career guidance.
+          </p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold text-slate-700">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Science: Physics, Chem, Bio, Maths</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Arts: Pol. Science, Sociology, History, Eng</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Career Mentorship &amp; CUET Seminars</li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-[#D4AF37]">check_circle</span> Fully Equipped Science Wing</li>
+</ul>
+</div>
+<div class="lg:col-span-6 relative rounded-xl overflow-hidden h-72 sm:h-80 shadow-md">
+<img alt="Class of 2026 Academic Cohort" class="w-full h-full object-cover" src="Assets/school-community.jpeg" loading="lazy" decoding="async"/>
+<div class="absolute bottom-3 left-3 bg-[#0B1B3D]/80 backdrop-blur-sm text-white px-3 py-1 rounded text-xs">
+            Class of 2026 Secondary &amp; Higher Secondary Cohort
+          </div>
+</div>
+</div>
+</div>
+</section>
+<section class="school-section" id="academic-pathways" aria-labelledby="pathways-heading">
+<div class="school-container max-w-7xl">
+<div class="section-heading-row"><div class="section-heading reveal-on-scroll"><span class="section-kicker">Higher secondary pathways</span><h2 class="section-title" id="pathways-heading">Your next chapter starts here.</h2><p class="section-description">Explore Science and Arts, and choose a direction that builds on your interests.</p></div><a class="school-button action-button" href="#quick-inquiry">Talk to the admissions desk <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div>
+<div class="pathway-grid">
+<article class="pathway-card interactive-card"><div class="pathway-photo"><img src="Assets/classroom.jpeg" alt="Learning in a school classroom" loading="lazy" decoding="async"/><span class="pathway-tag">Classes XI &amp; XII</span></div><div class="pathway-body"><h3>Science</h3><p>Ask questions, explore ideas, and build a foundation in the sciences and mathematics.</p><details><summary>Explore areas of learning <span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary><div class="subject-chips"><span>Physics</span><span>Chemistry</span><span>Biology</span><span>Mathematics</span></div></details><a class="school-button action-button" href="#quick-inquiry" data-inquiry-stream="xi-science">Enquire about Science <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div></article>
+<article class="pathway-card interactive-card"><div class="pathway-photo"><img src="Assets/classroom-community.jpeg" alt="Students and educators sharing a classroom celebration" loading="lazy" decoding="async"/><span class="pathway-tag">Classes XI &amp; XII</span></div><div class="pathway-body"><h3>Arts &amp; Humanities</h3><p>Understand people, society, and the stories that shape our world through the humanities.</p><details><summary>Explore areas of learning <span class="material-symbols-outlined" aria-hidden="true">expand_more</span></summary><div class="subject-chips"><span>English</span><span>History</span><span>Political Science</span><span>Sociology</span></div></details><a class="school-button action-button" href="#quick-inquiry" data-inquiry-stream="xi-arts">Enquire about Arts <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div></article>
+</div>
+<p class="pathway-note"><span class="material-symbols-outlined" aria-hidden="true">info</span>Contact the admissions office for current subject combinations, eligibility, and availability.</p>
+</div>
+</section>
+<!-- SECTION 5: NOTICE BOARD -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-surface" id="notice-board-section">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left 65%: Dynamic Tabbed Notice Board -->
+<div class="lg:col-span-12 flex flex-col gap-4 reveal-on-scroll">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-slate-300">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-[#c59b27] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] animate-pulse">campaign</span>
+                Academic Secretariat
+              </span>
+<h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#0B1B3D]">
+                Official Circulars &amp; Calendar 2026–27
+              </h2>
+</div>
+<span class="text-xs text-slate-500 font-medium">Session 2026–27 Academic Term</span>
+</div>
+<!-- Tab Filters -->
+<div class="section-tabs flex items-center gap-1.5 pb-1 text-xs font-semibold">
+<button class="notice-tab px-4 py-2 rounded bg-[#0B1B3D] text-white shadow-sm transition-all duration-300" data-cat="all" onclick="filterNotices('all')">
+              All Circulars
+            </button>
+<button class="notice-tab px-4 py-2 rounded bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all duration-300" data-cat="admissions" onclick="filterNotices('admissions')">
+              Admissions 2026
+            </button>
+<button class="notice-tab px-4 py-2 rounded bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all duration-300" data-cat="mbose" onclick="filterNotices('mbose')">
+              MBOSE Exams
+            </button>
+<button class="notice-tab px-4 py-2 rounded bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all duration-300" data-cat="events" onclick="filterNotices('events')">
+              Sports &amp; Culture
+            </button>
+<button class="notice-tab px-4 py-2 rounded bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all duration-300" data-cat="eco" onclick="filterNotices('eco')">
+              Eco-Club ML-14
+            </button>
+</div>
+<!-- Notice Cards -->
+<div class="flex flex-col gap-2" id="notice-search-tools" hidden>
+<label class="text-xs text-slate-600" for="notice-search">Search circulars</label>
+<div class="notice-search">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-500 shrink-0" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+<input id="notice-search" type="search" placeholder="Search by title, topic or circular number" aria-controls="notice-list" autocomplete="off"/>
+</div>
+<p class="text-xs text-slate-500" id="notice-results" role="status" aria-live="polite" aria-atomic="true"></p>
+<p class="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-600" id="notice-empty" hidden>No circulars found. Try another keyword or select All Circulars.</p>
+</div>
+<div class="flex flex-col gap-3 mt-1" id="notice-list">
+<!-- Notice 1 -->
+<div class="notice-item admissions bg-white p-4 sm:p-5 rounded-xl border border-slate-200 hover:border-[#D4AF37] shadow-sm hover:shadow-md transition-all flex items-start gap-4 relative overflow-hidden group">
+<div class="w-1.5 bg-[#D4AF37] absolute left-0 top-0 bottom-0"></div>
+<div class="bg-slate-100 px-3 py-2 rounded text-center flex-shrink-0 border border-slate-200 w-16">
+<span class="text-xl font-bold font-serif text-[#0B1B3D] block leading-none">15</span>
+<span class="text-[10px] font-black uppercase text-[#c59b27]">MAY</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold uppercase bg-amber-100 text-[#0B1B3D] px-2 py-0.5 rounded border border-amber-300">
+                    Admissions 2026–27
+                  </span>
+<span class="text-[11px] text-slate-500 font-mono">SFHSS/ADM/2026-08</span>
+</div>
+<h4 class="text-base sm:text-lg font-serif font-bold text-[#0B1B3D] group-hover:text-[#c59b27] transition-colors">
+                  Commencement of Class XI (Science &amp; Arts) Document Scrutiny &amp; Registration
+                </h4>
+<p class="text-slate-600 text-xs sm:text-sm mt-1">
+                  Shortlisted candidates from Class X SSLC must present attested marksheets, transfer certificates, and character certificates at the Academic Hall between 10:00 AM – 2:00 PM.
+                </p>
+</div>
+<a class="p-2 text-slate-400 group-hover:text-[#0B1B3D] hover:bg-slate-100 rounded-full transition-all self-center" href="#admission-steps" title="Download">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</a>
+</div>
+<!-- Notice 2 -->
+<div class="notice-item mbose bg-white p-4 sm:p-5 rounded-xl border border-slate-200 hover:border-[#D4AF37] shadow-sm hover:shadow-md transition-all flex items-start gap-4 relative overflow-hidden group">
+<div class="w-1.5 bg-[#0B1B3D] absolute left-0 top-0 bottom-0"></div>
+<div class="bg-slate-100 px-3 py-2 rounded text-center flex-shrink-0 border border-slate-200 w-16">
+<span class="text-xl font-bold font-serif text-[#0B1B3D] block leading-none">08</span>
+<span class="text-[10px] font-black uppercase text-slate-600">MAY</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold uppercase bg-slate-100 text-slate-800 px-2 py-0.5 rounded border border-slate-300">
+                    MBOSE Board
+                  </span>
+<span class="text-[11px] text-slate-500 font-mono">SFHSS/EXAM/26-102</span>
+</div>
+<h4 class="text-base sm:text-lg font-serif font-bold text-[#0B1B3D] group-hover:text-[#c59b27] transition-colors">
+                  Higher Secondary Practical Journal Submission &amp; Internal Assessment Timetable
+                </h4>
+<p class="text-slate-600 text-xs sm:text-sm mt-1">
+                  Roster for Physics, Chemistry, and Biology apparatus inspections and viva voce sessions in the Senior Science Wing.
+                </p>
+</div>
+<a class="p-2 text-slate-400 group-hover:text-[#0B1B3D] hover:bg-slate-100 rounded-full transition-all self-center" href="#admission-steps" title="Download">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</a>
+</div>
+<!-- Notice 3 -->
+<div class="notice-item events bg-white p-4 sm:p-5 rounded-xl border border-slate-200 hover:border-[#D4AF37] shadow-sm hover:shadow-md transition-all flex items-start gap-4 relative overflow-hidden group">
+<div class="w-1.5 bg-red-600 absolute left-0 top-0 bottom-0"></div>
+<div class="bg-slate-100 px-3 py-2 rounded text-center flex-shrink-0 border border-slate-200 w-16">
+<span class="text-xl font-bold font-serif text-[#0B1B3D] block leading-none">28</span>
+<span class="text-[10px] font-black uppercase text-red-700">APR</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold uppercase bg-red-50 text-red-800 px-2 py-0.5 rounded border border-red-300">
+                    Sports &amp; Culture
+                  </span>
+<span class="text-[11px] text-slate-500 font-mono">SFHSS/CULT/26-44</span>
+</div>
+<h4 class="text-base sm:text-lg font-serif font-bold text-[#0B1B3D] group-hover:text-[#c59b27] transition-colors">
+                  Annual Inter-House Football Championship &amp; Khasi Heritage Folk Exhibition
+                </h4>
+<p class="text-slate-600 text-xs sm:text-sm mt-1">
+                  Red, Blue, Green, and Gold house captains to assemble for athletics registration and traditional choir rehearsals.
+                </p>
+</div>
+<a class="p-2 text-slate-400 group-hover:text-[#0B1B3D] hover:bg-slate-100 rounded-full transition-all self-center" href="#admission-steps" title="Download">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</a>
+</div>
+<!-- Notice 4 -->
+<div class="notice-item eco bg-white p-4 sm:p-5 rounded-xl border border-slate-200 hover:border-[#D4AF37] shadow-sm hover:shadow-md transition-all flex items-start gap-4 relative overflow-hidden group">
+<div class="w-1.5 bg-emerald-600 absolute left-0 top-0 bottom-0"></div>
+<div class="bg-slate-100 px-3 py-2 rounded text-center flex-shrink-0 border border-slate-200 w-16">
+<span class="text-xl font-bold font-serif text-[#0B1B3D] block leading-none">19</span>
+<span class="text-[10px] font-black uppercase text-emerald-800">APR</span>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold uppercase bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded border border-emerald-300">
+                    Eco-Club ML-14
+                  </span>
+<span class="text-[11px] text-slate-500 font-mono">SFHSS/ECO/26-19</span>
+</div>
+<h4 class="text-base sm:text-lg font-serif font-bold text-[#0B1B3D] group-hover:text-[#c59b27] transition-colors">
+                  Samsymper Ridge Sapling Distribution &amp; Indigenous Pine Greening Schedule
+                </h4>
+<p class="text-slate-600 text-xs sm:text-sm mt-1">
+                  Eco-cadets will plant 500 saplings in collaboration with local dorbar shnong elders to preserve water catchment zones.
+                </p>
+</div>
+<a class="p-2 text-slate-400 group-hover:text-[#0B1B3D] hover:bg-slate-100 rounded-full transition-all self-center" href="#admission-steps" title="Download">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: AUTHENTIC CAMPUS LIFE IN MOTION (RICH PHOTO-STORY BENTO GRID) -->
+<section class="school-section bg-[#F4F6FB]" id="campus-life-bento" aria-labelledby="campus-life-heading">
+<div class="school-container max-w-7xl">
+<div class="section-heading-row"><div class="section-heading reveal-on-scroll"><span class="section-kicker">Life at S. Ferrando</span><h2 class="section-title" id="campus-life-heading">Small moments. Lasting memories.</h2><p class="section-description">See the learning, friendships, and shared experiences that make our school a community.</p></div><a class="school-button action-button" href="#gallery-section">Explore the gallery <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div>
+<div class="highlights-grid">
+<article class="highlight-card interactive-card"><img src="Assets/classroom.jpeg" alt="Students learning in a classroom" loading="lazy" decoding="async"/><div class="highlight-body"><span class="highlight-category">In the classroom</span><h3>Curiosity comes to class</h3><p>Every lesson is an opportunity to ask questions, share ideas, and discover something new.</p><a class="school-button action-button" href="#wings-section">Explore our academics <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div></article>
+<article class="highlight-card interactive-card"><img src="Assets/students-together.jpeg" alt="Students gathering with tree saplings" loading="lazy" decoding="async"/><div class="highlight-body"><span class="highlight-category">Beyond the classroom</span><h3>Growing together, outdoors</h3><p>Hands-on experiences help students connect with nature and care for the world around them.</p><a class="school-button action-button" href="#gallery-section">See school moments <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div></article>
+<article class="highlight-card interactive-card"><img src="Assets/student-awareness.jpeg" alt="Students promoting a tobacco-free community" loading="lazy" decoding="async"/><div class="highlight-body"><span class="highlight-category">In our community</span><h3>Young voices with purpose</h3><p>Shared activities encourage responsibility, confidence, and a spirit of service.</p><a class="school-button action-button" href="#mission-vision-section">Discover our values <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></div></article>
+</div>
+<div class="gallery-area" id="gallery-section" aria-labelledby="gallery-heading">
+<div class="section-heading reveal-on-scroll"><span class="section-kicker">A window into school life</span><h2 class="section-title" id="gallery-heading">Our school, in pictures.</h2><p class="section-description">Explore a few favourite moments from our school community.</p></div>
+<div class="gallery-filter" role="group" aria-label="Filter school photos" hidden><button type="button" data-gallery-filter="all" aria-pressed="true">All moments</button><button type="button" data-gallery-filter="learning" aria-pressed="false">Learning</button><button type="button" data-gallery-filter="community" aria-pressed="false">Community</button><button type="button" data-gallery-filter="nature" aria-pressed="false">Nature &amp; outdoors</button></div>
+<div class="gallery-grid"><a class="gallery-item" href="Assets/classroom.jpeg" data-gallery-category="learning" data-gallery-title="Inside the classroom" aria-label="View photo: Inside the classroom"><img src="Assets/classroom.jpeg" alt="Students taking part in a classroom lesson" loading="lazy" decoding="async"/><span class="gallery-caption"><span>Inside the classroom</span><span class="material-symbols-outlined" aria-hidden="true">fullscreen</span></span></a>
+<a class="gallery-item" href="Assets/morning-assembly.jpeg" data-gallery-category="community" data-gallery-title="Together each morning" aria-label="View photo: Together each morning"><img src="Assets/morning-assembly.jpeg" alt="The school community gathering for morning assembly" loading="lazy" decoding="async"/><span class="gallery-caption"><span>Together each morning</span><span class="material-symbols-outlined" aria-hidden="true">fullscreen</span></span></a>
+<a class="gallery-item" href="Assets/students-together.jpeg" data-gallery-category="nature" data-gallery-title="Growing a greener tomorrow" aria-label="View photo: Growing a greener tomorrow"><img src="Assets/students-together.jpeg" alt="Students holding tree saplings during a school activity" loading="lazy" decoding="async"/><span class="gallery-caption"><span>Growing a greener tomorrow</span><span class="material-symbols-outlined" aria-hidden="true">fullscreen</span></span></a>
+<a class="gallery-item" href="Assets/classroom-community.jpeg" data-gallery-category="community" data-gallery-title="Moments we share" aria-label="View photo: Moments we share"><img src="Assets/classroom-community.jpeg" alt="Students and teachers celebrating in a classroom" loading="lazy" decoding="async"/><span class="gallery-caption"><span>Moments we share</span><span class="material-symbols-outlined" aria-hidden="true">fullscreen</span></span></a>
+<a class="gallery-item" href="Assets/outdoor-learning.jpeg" data-gallery-category="nature" data-gallery-title="Learning beyond four walls" aria-label="View photo: Learning beyond four walls"><img src="Assets/outdoor-learning.jpeg" alt="Students working together on an outdoor planting activity" loading="lazy" decoding="async"/><span class="gallery-caption"><span>Learning beyond four walls</span><span class="material-symbols-outlined" aria-hidden="true">fullscreen</span></span></a>
+<a class="gallery-item" href="Assets/school-community.jpeg" data-gallery-category="learning" data-gallery-title="Our school community" aria-label="View photo: Our school community"><img src="Assets/school-community.jpeg" alt="School students gathered outside the main building" loading="lazy" decoding="async"/><span class="gallery-caption"><span>Our school community</span><span class="material-symbols-outlined" aria-hidden="true">fullscreen</span></span></a></div><p class="gallery-status" id="gallery-status" role="status" aria-live="polite">6 photos shown</p>
+</div>
+</div>
+</section>
+<!-- SECTION 7: FACILITIES & STUDENT SAFETY (KOLKATA BENCHMARK) -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-surface" id="facilities-section">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+<span class="text-xs font-bold uppercase tracking-widest text-[#c59b27] flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+          Campus Infrastructure &amp; Safeguarding
+        </span>
+<h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#0B1B3D] mt-1.5">
+          Modern Facilities in a Mountain Sanctuary
+        </h2>
+<p class="text-slate-600 text-xs sm:text-base mt-2">
+          Providing high-grade scholastic infrastructure tailored for physical well-being, hygienic security, and modern laboratory investigation.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm interactive-card">
+<div class="w-10 h-10 rounded-lg bg-[#0B1B3D] text-[#D4AF37] flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">science</span>
+</div>
+<h4 class="text-lg font-serif font-bold text-[#0B1B3D] mb-1.5" id="science-labs">MBOSE Science Laboratories</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Separate Physics, Chemistry, and Biology workbenches equipped for individual student practicals, micro-slides, and chemical reagents.
+          </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm interactive-card">
+<div class="w-10 h-10 rounded-lg bg-[#1B4332] text-emerald-400 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">water_full</span>
+</div>
+<h4 class="text-lg font-serif font-bold text-[#0B1B3D] mb-1.5" id="drinking-water">Spring Water Filtration</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Pure natural mountain spring water gravity-fed and treated with multi-stage UV filtration units for clean, unlimited drinking across wings.
+          </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm interactive-card">
+<div class="w-10 h-10 rounded-lg bg-[#0B1B3D] text-[#D4AF37] flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">directions_bus</span>
+</div>
+<h4 class="text-lg font-serif font-bold text-[#0B1B3D] mb-1.5" id="school-transport">Monitored School Vans</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Safe designated student transport covering key village pickup points across South West Khasi Hills with senior teacher escorts.
+          </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm interactive-card">
+<div class="w-10 h-10 rounded-lg bg-[#0B1B3D] text-[#D4AF37] flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">local_library</span>
+</div>
+<h4 class="text-lg font-serif font-bold text-[#0B1B3D] mb-1.5" id="school-library">Don Bosco Memorial Library</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Over <span data-counter="8000">8,000</span> volumes encompassing reference encyclopedias, NCERT resources, Khasi folk anthologies, and subscribed science periodicals.
+          </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm interactive-card">
+<div class="w-10 h-10 rounded-lg bg-red-100 text-red-600 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+<h4 class="text-lg font-serif font-bold text-[#0B1B3D] mb-1.5" id="first-aid">Dispensary &amp; First Aid</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+            On-campus infirmary managed with trained sister-nurses, medical emergency stocks, oxygen provision, and tie-up with local health center.
+          </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm interactive-card">
+<div class="w-10 h-10 rounded-lg bg-[#1B4332] text-emerald-400 flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[22px]">sports_soccer</span>
+</div>
+<h4 class="text-lg font-serif font-bold text-[#0B1B3D] mb-1.5" id="sports-pavilion">Hillside Football Pavilion</h4>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Expansive open-air playground for football tournaments, athletics track and field events, volleyball court, and morning drills.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: 4-STEP ADMISSIONS ROADMAP (ST. XAVIER / LA MARTINIERE INFLUENCE) -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-[#ECEFF7] border-y border-slate-300" id="admission-steps">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+<span class="text-xs font-bold uppercase tracking-widest text-[#c59b27] flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">route</span>
+          Transparent Enrollment Trajectory
+        </span>
+<h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#0B1B3D] mt-1.5">
+          Your 4-Step Pathway to S. Ferrando
+        </h2>
+<p class="text-slate-600 text-xs sm:text-base mt-2">
+          Structured, merit-guided admission workflow engineered to induct prospective candidates into Nursery, Primary, Secondary, or Class XI Science &amp; Arts.
+        </p>
+</div>
+<!-- 4 Sequential Steps -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="interactive-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between group reveal-on-scroll delay-100">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl font-serif font-black text-[#c59b27]">01</span>
+<span class="p-2.5 rounded-lg bg-slate-100 text-[#0B1B3D] group-hover:bg-[#D4AF37] group-hover:text-[#0B1B3D] transition-all">
+<span class="material-symbols-outlined text-[22px]">edit_document</span>
+</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-[#c59b27]">Step One</span>
+<h3 class="text-lg font-serif font-bold text-[#0B1B3D] mb-2">Application Procurement</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Collect application prospectus from the school office or register via online callback dispatch. Birth certificate and marksheets required.
+            </p>
+</div>
+<div class="pt-3 border-t border-slate-100 mt-4 text-[11px] font-semibold text-slate-500">
+            Desk: Mon–Fri (8:45 AM – 2:30 PM)
+          </div>
+</div>
+<div class="interactive-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between group reveal-on-scroll delay-200">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl font-serif font-black text-[#c59b27]">02</span>
+<span class="p-2.5 rounded-lg bg-slate-100 text-[#0B1B3D] group-hover:bg-[#D4AF37] group-hover:text-[#0B1B3D] transition-all">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-[#c59b27]">Step Two</span>
+<h3 class="text-lg font-serif font-bold text-[#0B1B3D] mb-2">Stream Counseling &amp; Aptitude</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Personalized stream counseling with senior mentors for Class XI candidates to choose between Science (PCM/PCB) and Arts (Humanities).
+            </p>
+</div>
+<div class="pt-3 border-t border-slate-100 mt-4 text-[11px] font-semibold text-slate-500">
+            Venue: Academic Council Room
+          </div>
+</div>
+<div class="interactive-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between group reveal-on-scroll delay-300">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl font-serif font-black text-[#c59b27]">03</span>
+<span class="p-2.5 rounded-lg bg-slate-100 text-[#0B1B3D] group-hover:bg-[#D4AF37] group-hover:text-[#0B1B3D] transition-all">
+<span class="material-symbols-outlined text-[22px]">fact_check</span>
+</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-[#c59b27]">Step Three</span>
+<h3 class="text-lg font-serif font-bold text-[#0B1B3D] mb-2">Document Verification</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Verification of Transfer Certificate (TC), Conduct Certificate, and ST/SC/OBC Scholarship credentials with school registrar.
+            </p>
+</div>
+<div class="pt-3 border-t border-slate-100 mt-4 text-[11px] font-semibold text-slate-500">
+            Notification: Weekly Merit Board
+          </div>
+</div>
+<div class="interactive-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between group reveal-on-scroll delay-400">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl font-serif font-black text-emerald-600">04</span>
+<span class="p-2.5 rounded-lg bg-emerald-50 text-emerald-800 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-[22px]">task_alt</span>
+</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Step Four</span>
+<h3 class="text-lg font-serif font-bold text-[#0B1B3D] mb-2">Formal Enrollment &amp; Kit</h3>
+<p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Fee settlement, official uniform kit issuance (navy blazer &amp; house badge), student diary, and induction into Ferrandian family.
+            </p>
+</div>
+<div class="pt-3 border-t border-slate-100 mt-4 text-[11px] font-semibold text-emerald-800">
+            Session Begins: June 01, 2026
+          </div>
+</div>
+</div>
+<!-- Download Strip -->
+<div class="mt-8 bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 reveal-on-scroll">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-[#0B1B3D] text-[#D4AF37] flex items-center justify-center flex-shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-[22px]">folder_open</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-[#0B1B3D]" id="prospectus">Official Admission Documents 2026–27</h4>
+<p class="text-slate-500 text-xs">Ask the school office for current subjects, fees, and admission guidance.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-wrap">
+<a class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-[#0B1B3D] text-xs font-bold rounded flex items-center gap-1.5 transition-all border border-slate-300" href="#quick-inquiry">
+<span class="material-symbols-outlined text-[16px] text-[#D4AF37]">picture_as_pdf</span>
+<span>Request Prospectus</span>
+</a>
+<a class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-[#0B1B3D] text-xs font-bold rounded flex items-center gap-1.5 transition-all border border-slate-300" href="#quick-inquiry">
+<span class="material-symbols-outlined text-[16px] text-[#D4AF37]">payments</span>
+<span>Ask About Fees</span>
+</a>
+<a class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-[#0B1B3D] text-xs font-bold rounded flex items-center gap-1.5 transition-all border border-slate-300" href="#quick-inquiry">
+<span class="material-symbols-outlined text-[16px] text-emerald-700">loyalty</span>
+<span>Scholarship Enquiry</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="school-section resources-section" id="resources-section" aria-labelledby="resources-heading">
+<div class="school-container max-w-7xl"><div class="section-heading reveal-on-scroll"><span class="section-kicker">For students &amp; families</span><h2 class="section-title" id="resources-heading">The essentials, all in one place.</h2><p class="section-description">A little less searching. A little more time for what matters.</p></div>
+<div class="resource-grid">
+<article class="resource-card interactive-card"><span class="resource-icon material-symbols-outlined" aria-hidden="true">assignment</span><h3>Admissions guide</h3><p>Understand the steps from your first enquiry to joining our school.</p><a class="school-button action-button" href="#admission-steps">View the process <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></article>
+<article class="resource-card interactive-card"><span class="resource-icon material-symbols-outlined" aria-hidden="true">campaign</span><h3>School notices</h3><p>Find circulars, academic updates, and information from the school office.</p><a class="school-button action-button" href="#notice-board-section">Browse notices <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></article>
+<article class="resource-card interactive-card"><span class="resource-icon material-symbols-outlined" aria-hidden="true">quiz</span><h3>Common questions</h3><p>Find answers about admissions, daily routines, and student support.</p><a class="school-button action-button" href="#faq-accordion">Read the FAQs <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></article>
+<article class="resource-card interactive-card"><span class="resource-icon material-symbols-outlined" aria-hidden="true">support_agent</span><h3>Speak with us</h3><p>Ask about subject choices, fees, or the next step for your child.</p><a class="school-button action-button" href="#quick-inquiry">Make an enquiry <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></article>
+</div></div>
+</section>
+<!-- FAMILY FAQ AND ADMISSION ENQUIRY -->
+<section class="py-14 sm:py-20 px-4 sm:px-8 bg-surface" id="student-portal">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left 60%: Interactive FAQ Accordion -->
+<div class="lg:col-span-7 flex flex-col gap-4 reveal-on-scroll">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-[#c59b27] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">help</span>
+              Parent &amp; Guardian Information Hub
+            </span>
+<h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#0B1B3D] mt-1">
+              Frequently Asked Questions
+            </h2>
+<p class="text-slate-600 text-xs sm:text-sm mt-1">
+              Clear answers regarding boarding, academic eligibility, fee concessions, and school routine.
+            </p>
+</div>
+<div class="flex flex-col gap-3 mt-2" id="faq-accordion">
+<details class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm group hover:border-[#D4AF37] transition-all" open="">
+<summary class="font-serif font-bold text-base sm:text-lg text-[#0B1B3D] cursor-pointer flex items-center justify-between list-none">
+<span>What are the admission requirements for Class XI Science &amp; Arts?</span>
+<span class="material-symbols-outlined text-[#D4AF37] faq-chevron transition-transform duration-300">expand_more</span>
+</summary>
+<div class="text-slate-600 text-xs sm:text-sm leading-relaxed mt-2 pt-2 border-t border-slate-100">
+                Applicants must have passed the Class X SSLC exam from MBOSE, CBSE, or any recognized state board. For Class XI Science (PCM/PCB), clear passes with sound percentage in Mathematics and Science are required. For Arts, marks in English and Social Science are reviewed during counseling.
+              </div>
+</details>
+<details class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm group hover:border-[#D4AF37] transition-all">
+<summary class="font-serif font-bold text-base sm:text-lg text-[#0B1B3D] cursor-pointer flex items-center justify-between list-none">
+<span>Are secure hostel facilities provided for outstation students?</span>
+<span class="material-symbols-outlined text-[#D4AF37] faq-chevron transition-transform duration-300">expand_more</span>
+</summary>
+<div class="text-slate-600 text-xs sm:text-sm leading-relaxed mt-2 pt-2 border-t border-slate-100">
+                Yes. Dedicated and safe residential boarding facilities operate under the direct care of the Sisters of Mary Help of Christians (MSMHC). Priority is given to students traveling from remote villages across South West Khasi Hills.
+              </div>
+</details>
+<details class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm group hover:border-[#D4AF37] transition-all">
+<summary class="font-serif font-bold text-base sm:text-lg text-[#0B1B3D] cursor-pointer flex items-center justify-between list-none">
+<span>What scholarships and financial concessions are available?</span>
+<span class="material-symbols-outlined text-[#D4AF37] faq-chevron transition-transform duration-300">expand_more</span>
+</summary>
+<div class="text-slate-600 text-xs sm:text-sm leading-relaxed mt-2 pt-2 border-t border-slate-100">
+                All eligible tribal students are assisted in receiving the Government of Meghalaya Post-Matric &amp; Pre-Matric Tribal Scholarships. Furthermore, the Venerable Stephen Ferrando Memorial Concession offers direct fee waivers for underprivileged deserving scholars.
+              </div>
+</details>
+<details class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm group hover:border-[#D4AF37] transition-all">
+<summary class="font-serif font-bold text-base sm:text-lg text-[#0B1B3D] cursor-pointer flex items-center justify-between list-none">
+<span>What is the school uniform and dress code policy?</span>
+<span class="material-symbols-outlined text-[#D4AF37] faq-chevron transition-transform duration-300">expand_more</span>
+</summary>
+<div class="text-slate-600 text-xs sm:text-sm leading-relaxed mt-2 pt-2 border-t border-slate-100">
+                Students wear navy blue blazers with official crest, pleated skirts / formal trousers, white shirts, striped school tie, and assigned house sport jerseys on Wednesdays and Saturdays during inter-house games.
+              </div>
+</details>
+</div>
+</div>
+<!-- Right 40%: Admission Callback Inquiry Card -->
+<div class="lg:col-span-5 bg-gradient-to-b from-[#0B1B3D] to-[#132B5E] text-white p-6 sm:p-7 rounded-2xl shadow-xl border border-[#D4AF37]/40 reveal-on-scroll delay-200 interactive-card" id="quick-inquiry">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-[#D4AF37] text-[20px] animate-pulse">headset_mic</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#D4AF37]">Admissions Desk 2026–27</span>
+</div>
+<h3 class="text-2xl font-serif font-bold text-white mb-1">
+            Let's talk about admission
+          </h3>
+<p class="text-xs text-slate-300 mb-4">
+            Share a few details to prepare an enquiry email for our admissions office.
+          </p>
+<form class="flex flex-col gap-3" id="admission-inquiry-form" action="mailto:admissions@sferrandosamsymper.edu.in" method="post" enctype="text/plain">
+<div>
+<label class="block text-[10px] uppercase font-bold tracking-wider text-slate-300 mb-1" for="student-name">Student Full Name</label>
+<input class="w-full px-3.5 py-2 text-xs rounded bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] transition-all" id="student-name" name="student-name" autocomplete="name" maxlength="100" placeholder="Student full name" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-[10px] uppercase font-bold tracking-wider text-slate-300 mb-1" for="parent-mobile">Parent Mobile</label>
+<input class="w-full px-3.5 py-2 text-xs rounded bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] transition-all" id="parent-mobile" name="parent-mobile" autocomplete="tel" minlength="10" maxlength="20" placeholder="Parent contact number" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-[10px] uppercase font-bold tracking-wider text-slate-300 mb-1" for="admission-class">Seeking Admission For</label>
+<select id="admission-class" name="admission-class" class="w-full px-3.5 py-2 text-xs rounded bg-[#10244D] border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37] transition-all">
+<option value="nursery">Pre-Primary / Nursery</option>
+<option value="primary">Primary (Classes I–V)</option>
+<option value="middle">Middle School (VI–VIII)</option>
+<option value="secondary">Class IX / X Secondary</option>
+<option value="xi-science">Class XI Science (PCM/PCB)</option>
+<option value="xi-arts">Class XI Arts (Humanities)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-[10px] uppercase font-bold tracking-wider text-slate-300 mb-1" for="student-stay">Day Scholar or Hostel Needed?</label>
+<select id="student-stay" name="student-stay" class="w-full px-3.5 py-2 text-xs rounded bg-[#10244D] border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37] transition-all">
+<option value="day">Day Scholar (Local Samsymper / Bus Route)</option>
+<option value="girls">Girls Hostel (MSMHC Convent)</option>
+<option value="boys">Boys Hostel</option>
+</select>
+</div>
+<button class="shimmer-btn mt-2 py-3 rounded text-[#0B1B3D] text-xs font-bold uppercase tracking-wider shadow hover:brightness-110 transition-all flex items-center justify-center gap-2 group" type="submit">
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">send</span>
+<span>Prepare Enquiry Email</span>
+</button>
+<span class="text-[10px] text-center text-slate-400">
+              Opens your email app so you can review your enquiry before sending.
+            </span>
+
+<p id="inquiry-status" role="status" hidden></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="school-section" id="visit-section" aria-labelledby="visit-heading"><div class="school-container max-w-7xl"><div class="visit-card reveal-on-scroll"><div class="visit-copy"><span class="section-kicker">Come and say hello</span><h2 class="section-title" id="visit-heading">Your family's next chapter.<br/>Let's explore it together.</h2><p class="section-description">Meet our community, ask your questions, and discover what learning at S. Ferrando could look like for your child.</p><div class="visit-actions"><a class="school-button gold shimmer-btn" href="#quick-inquiry">Enquire about a visit <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a><a class="school-button outlined" href="tel:+919436102844"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call the school</a></div></div><figure class="visit-photo"><img src="Assets/school-community.jpeg" alt="Our school community outside the main school building" loading="lazy" decoding="async"/><figcaption>Samsymper, Meghalaya &middot; Since 1971</figcaption></figure></div></div></section>
+<!-- SCHOOL CONTACT AND VISITOR INFORMATION -->
+<section class="py-12 px-4 sm:px-8 bg-[#0B1B3D] text-white border-t border-[#D4AF37]/30" id="campus-visit-geo" aria-labelledby="campus-location-heading">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+<div class="lg:col-span-7 campus-map-panel reveal-on-scroll" id="campus-map">
+<iframe title="Google Maps: S. Ferrando Higher Secondary School, Samsymper" src="https://www.google.com/maps?q=S.Ferrando%20Higher%20Secondary%20School%2C%20Samsymper%2C%20Meghalaya&amp;z=16&amp;output=embed" width="100%" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-4 reveal-on-scroll delay-100" id="campus-contact">
+<span class="section-kicker">Find our campus</span>
+<h2 class="text-2xl sm:text-3xl text-white" id="campus-location-heading">Visit S. Ferrando<br/>in Samsymper.</h2>
+<p class="text-slate-300 text-sm leading-relaxed">Explore our location on the map and get in touch with the school office to plan your visit. We look forward to welcoming you to our community.</p>
+<p class="text-sm text-slate-300 flex items-start gap-2"><span class="material-symbols-outlined text-[#D4AF37] text-[20px]" aria-hidden="true">location_on</span><span>Samsymper, South West Khasi Hills District,<br/>Meghalaya &ndash; 793114, India</span></p>
+<div class="border-t border-white/15 pt-4 mt-1"><p class="text-xs uppercase tracking-wider text-[#D4AF37]" id="office-hours">Office Hours</p><p class="text-sm text-slate-200 mt-2">Mon&ndash;Fri: 8:45 AM &ndash; 3:30 PM</p></div>
+<div class="flex flex-wrap gap-3 mt-2">
+<a class="school-button gold shimmer-btn" href="https://share.google/eXT4ZOyFsYBNXhDPW" target="_blank" rel="noopener noreferrer">Open Google Maps <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>
+<a class="school-button outlined" href="tel:+919436102844"><span class="material-symbols-outlined" aria-hidden="true">call</span> Call the school</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- PRESTIGIOUS FOUR-COLUMN INSTITUTIONAL FOOTER -->
+<footer class="bg-[#050e1f] text-slate-300 border-t-4 border-[#D4AF37]">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 lg:py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+<!-- Col 1: School Identity & Motto -->
+<div class="flex flex-col gap-3 reveal-on-scroll">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-white p-1 ring-1 ring-[#D4AF37] shadow">
+<img alt="Ferrando Crest" class="w-full h-full object-contain" src="Assets/school-crest.jpeg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-serif font-bold text-white text-sm sm:text-base leading-tight uppercase">S. Ferrando Hr. Sec. School</span>
+<span class="text-[11px] text-[#D4AF37] font-semibold uppercase">Samsymper • Estd. 1971</span>
+</div>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed">
+          Estd. 1971 under the apostolic patronage of Ven. Bishop Stephen Ferrando and the Missionary Sisters of Mary Help of Christians (MSMHC). Dedicated to academic excellence, moral courage, and Khasi heritage stewardship.
+        </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="text-[10px] bg-[#132B5E] text-[#D4AF37] px-2 py-0.5 rounded font-mono font-bold border border-[#D4AF37]/30">
+            MBOSE HS-2104
+          </span>
+<span class="text-[10px] bg-[#132B5E] text-slate-300 px-2 py-0.5 rounded font-mono">
+            UDISE: 17040201001
+          </span>
+</div>
+</div>
+<!-- Col 2: K-12 Wings -->
+<div class="flex flex-col gap-2.5 reveal-on-scroll delay-100">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-1.5 font-serif">
+          Academic Wings
+        </h4>
+<ul class="text-xs flex flex-col gap-2 text-slate-400">
+<li><a class="footer-wing-button" href="#wings-section" data-wing="pre-primary">Pre-Primary &amp; Kindergarten <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></li>
+<li><a class="footer-wing-button" href="#wings-section" data-wing="primary">Primary (Classes I&ndash;V) <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></li>
+<li><a class="footer-wing-button" href="#wings-section" data-wing="middle">Middle School (Classes VI&ndash;VIII) <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></li>
+<li><a class="footer-wing-button" href="#wings-section" data-wing="senior">Higher Secondary Science <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></li>
+<li><a class="footer-wing-button" href="#wings-section" data-wing="senior">Higher Secondary Arts &amp; Humanities <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a></li>
+</ul>
+</div>
+<!-- Col 3: Student Portals & Life -->
+<div class="flex flex-col gap-2.5 reveal-on-scroll delay-200">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-1.5 font-serif">
+          Student Portals &amp; Life
+        </h4>
+<ul class="text-xs flex flex-col gap-2 text-slate-400">
+<li class="hover:text-[#D4AF37] hover:translate-x-1 transition-all"><a href="#notice-board-section">Official Circular Archive</a></li>
+<li class="hover:text-[#D4AF37] hover:translate-x-1 transition-all"><a href="#admission-steps">Admissions Prospectus 2026–27</a></li>
+<li class="hover:text-[#D4AF37] hover:translate-x-1 transition-all"><a href="#mission-vision-section">Mission &amp; Vision</a></li>
+<li class="hover:text-[#D4AF37] hover:translate-x-1 transition-all"><a href="#facilities-section">Science Laboratories &amp; Library</a></li>
+<li class="hover:text-[#D4AF37] hover:translate-x-1 transition-all"><a href="#campus-life-bento">National Green Corps Chapter ML-14</a></li>
+<li class="hover:text-[#D4AF37] hover:translate-x-1 transition-all"><a href="#resources-section">Family Resource Centre</a></li>
+</ul>
+</div>
+<!-- Col 4: Secretariat Contact -->
+<div class="flex flex-col gap-2.5 reveal-on-scroll delay-300">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider border-b border-white/10 pb-1.5 font-serif">
+          Principal's Secretariat
+        </h4>
+<div class="text-xs text-slate-400 flex flex-col gap-2">
+<p class="flex items-start gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[15px] text-[#D4AF37] flex-shrink-0 mt-0.5">location_on</span>
+<span>Samsymper, South West Khasi Hills District, Meghalaya - 793114, India</span>
+</p>
+<p class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[15px] text-[#D4AF37]">call</span>
+<span>+91 94361 02844 / 0364-220000</span>
+</p>
+<p class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[15px] text-[#D4AF37]">mail</span>
+<span>admissions@sferrandosamsymper.edu.in</span>
+</p>
+<p class="flex items-center gap-1.5 text-emerald-400 font-semibold mt-1">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>Affiliated to MBOSE, Tura</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Copyright Sub-Strip -->
+<div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+<div>
+        © 1971 – 2026 S. Ferrando Higher Secondary School, Samsymper. Managed by MSMHC Society.
+      </div>
+<div class="flex items-center gap-4">
+<a class="hover:text-[#D4AF37] transition-colors" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-[#D4AF37] transition-colors" href="#">Code of Conduct</a>
+<span>•</span>
+<a class="hover:text-[#D4AF37] transition-colors" href="#">Terms of Enrollment</a>
+</div>
+</div>
+</div>
+</footer>
+<dialog class="photo-dialog" id="school-photo-dialog" aria-labelledby="photo-dialog-title"><div class="photo-dialog-header"><h2 id="photo-dialog-title">School photo</h2><button type="button" data-photo-close aria-label="Close photo viewer" autofocus><span class="material-symbols-outlined" aria-hidden="true">close</span></button></div><img alt=""/><div class="photo-dialog-footer"><p id="photo-dialog-counter" aria-live="polite"></p><div class="photo-dialog-controls"><button type="button" data-photo-previous aria-label="Previous photo"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span></button><button type="button" data-photo-next aria-label="Next photo"><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button></div></div></dialog>
+<!-- Floating shortcuts stay available while the main header scrolls away. -->
+<div class="floating-actions" id="floating-actions">
+<nav class="floating-navigation" id="floating-navigation" aria-label="Quick navigation" hidden>
+<p class="floating-navigation-title">Quick Navigation</p>
+<a href="#home">Home</a>
+<a href="#about-section">About School</a>
+<a href="#mission-vision-section">Mission &amp; Vision</a>
+<a href="#why-ferrando">Why S. Ferrando</a>
+<a href="#academic-pathways">Academic Pathways</a>
+<a href="#resources-section">Family Resources</a>
+<a href="#visit-section">Plan a Visit</a>
+<a href="#wings-section">Wings (K-12)</a>
+<a href="#principal-message">Principal's Message</a>
+<a href="#vice-president-section">Vice President</a>
+<a href="#chairman-section">Chairman</a>
+<a href="#notice-board-section">Notice Board</a>
+<a href="#campus-life-bento">Campus Life</a>
+<a href="#facilities-section">Facilities</a>
+<a href="#admission-steps">Admissions</a>
+<a href="#campus-visit-geo">Contact</a>
+</nav>
+<a class="floating-button" id="back-to-top" href="#site-header" aria-label="Back to top" title="Back to top">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 12 6-6 6 6M12 6v12"/></svg>
+</a>
+<button class="floating-button floating-menu-toggle" id="floating-menu-toggle" type="button" aria-controls="floating-navigation" aria-expanded="false" aria-label="Open quick navigation" title="Quick navigation" hidden>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+</button>
+</div>
+<!-- SCRIPTS: WINGS TAB SWITCHING, NOTICE FILTERING & INTERSECTION OBSERVER -->
+<script>
+  // Desktop hover dropdowns, with click/tap and keyboard controls on every device.
+  const siteHeader = document.getElementById('site-header');
+  const primaryNavigation = document.getElementById('primary-navigation');
+  const navToggle = document.getElementById('nav-toggle');
+  const navDropdowns = [...primaryNavigation.querySelectorAll('.nav-dropdown')];
+  const desktopNavigation = window.matchMedia('(min-width: 1024px)');
+  const hoverNavigation = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  function closeDropdowns(except = null) {
+    navDropdowns.forEach(dropdown => {
+      if (dropdown !== except) dropdown.open = false;
+    });
+  }
+
+  function setNavigationOpen(isOpen) {
+    primaryNavigation.classList.toggle('is-open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    if (!isOpen) closeDropdowns();
+  }
+
+  siteHeader.classList.add('nav-enhanced');
+  navToggle.addEventListener('click', () => {
+    setNavigationOpen(navToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  navDropdowns.forEach(dropdown => {
+    dropdown.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'mouse' || !desktopNavigation.matches || !hoverNavigation.matches) return;
+      closeDropdowns(dropdown);
+      dropdown.open = true;
+    });
+    dropdown.addEventListener('pointerleave', event => {
+      if (event.pointerType !== 'mouse' || !desktopNavigation.matches || !hoverNavigation.matches) return;
+      // Allow keyboard users to continue through a focused submenu.
+      const focused = document.activeElement;
+      if (dropdown.contains(focused) && focused.matches(':focus-visible')) return;
+      dropdown.open = false;
+    });
+    dropdown.addEventListener('focusout', event => {
+      if (!dropdown.contains(event.relatedTarget) && !dropdown.matches(':hover')) dropdown.open = false;
+    });
+    dropdown.querySelector('summary').addEventListener('click', event => {
+      closeDropdowns(dropdown);
+      // A mouse click on a menu already opened by hover should keep it open.
+      if (event.detail > 0 && desktopNavigation.matches && hoverNavigation.matches && dropdown.matches(':hover')) {
+        event.preventDefault();
+        dropdown.open = true;
+      }
+    });
+    dropdown.addEventListener('toggle', () => {
+      if (dropdown.open) closeDropdowns(dropdown);
+    });
+  });
+
+  primaryNavigation.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    if (link.dataset.wing) switchWing(link.dataset.wing);
+    if (link.dataset.notice) filterNotices(link.dataset.notice);
+
+    primaryNavigation.querySelectorAll('.active').forEach(item => item.classList.remove('active'));
+    primaryNavigation.querySelectorAll('[aria-current]').forEach(item => item.removeAttribute('aria-current'));
+    link.setAttribute('aria-current', 'location');
+    const dropdown = link.closest('.nav-dropdown');
+    (dropdown ? dropdown.querySelector('summary') : link).classList.add('active');
+    setNavigationOpen(false);
+
+    // Keep keyboard focus at the destination after the navigation closes.
+    const destination = document.getElementById(link.hash.slice(1));
+    if (destination) {
+      destination.setAttribute('tabindex', '-1');
+      destination.focus({ preventScroll: true });
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!siteHeader.contains(event.target)) setNavigationOpen(false);
+    else if (!primaryNavigation.contains(event.target)) closeDropdowns();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const openDropdown = navDropdowns.find(dropdown => dropdown.open);
+    if (openDropdown) {
+      closeDropdowns();
+      openDropdown.querySelector('summary').focus();
+    } else if (navToggle.getAttribute('aria-expanded') === 'true') {
+      setNavigationOpen(false);
+      navToggle.focus();
+    }
+  });
+
+  desktopNavigation.addEventListener('change', () => {
+    const focusWasInNavigation = primaryNavigation.contains(document.activeElement);
+    setNavigationOpen(false);
+    if (!desktopNavigation.matches && focusWasInNavigation) navToggle.focus();
+    else if (desktopNavigation.matches && document.activeElement === navToggle) {
+      primaryNavigation.querySelector('a').focus();
+    }
+  });
+
+  // Floating quick navigation and back-to-top shortcuts.
+  const floatingActions = document.getElementById('floating-actions');
+  const floatingNavigation = document.getElementById('floating-navigation');
+  const floatingMenuToggle = document.getElementById('floating-menu-toggle');
+  const backToTop = document.getElementById('back-to-top');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  // Keep full messages readable without JavaScript; enhance each card independently.
+  document.querySelectorAll('.message-read-more').forEach(button => {
+    const content = document.getElementById(button.getAttribute('aria-controls'));
+    const title = button.closest('article').querySelector('h2').textContent.trim();
+    function setMessageExpanded(expanded) {
+      button.setAttribute('aria-expanded', String(expanded));
+      button.setAttribute('aria-label', `${expanded ? 'Read less' : 'Read more'} of the ${title}`);
+      button.querySelector('[data-message-label]').textContent = expanded ? 'Read Less' : 'Read More';
+      content.classList.toggle('is-collapsed', !expanded);
+      content.inert = !expanded;
+      content.setAttribute('aria-hidden', String(!expanded));
+    }
+    setMessageExpanded(false);
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      setMessageExpanded(button.getAttribute('aria-expanded') !== 'true');
+    });
+  });
+
+  function setQuickNavigationOpen(isOpen, restoreFocus = false) {
+    floatingNavigation.hidden = !isOpen;
+    floatingMenuToggle.setAttribute('aria-expanded', String(isOpen));
+    floatingMenuToggle.setAttribute('aria-label', isOpen ? 'Close quick navigation' : 'Open quick navigation');
+    if (restoreFocus) floatingMenuToggle.focus({ preventScroll: true });
+  }
+
+  floatingMenuToggle.hidden = false;
+  floatingMenuToggle.addEventListener('click', () => {
+    const isOpen = floatingNavigation.hidden;
+    setNavigationOpen(false);
+    setQuickNavigationOpen(isOpen);
+    if (isOpen) floatingNavigation.querySelector('a').focus({ preventScroll: true });
+  });
+
+  floatingNavigation.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const destination = document.getElementById(link.hash.slice(1));
+    setQuickNavigationOpen(false);
+    if (destination) {
+      destination.setAttribute('tabindex', '-1');
+      destination.focus({ preventScroll: true });
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!floatingActions.contains(event.target)) {
+      const focusWasInMenu = floatingNavigation.contains(document.activeElement);
+      setQuickNavigationOpen(false, focusWasInMenu);
+    }
+  });
+
+  floatingActions.addEventListener('focusout', event => {
+    if (!floatingActions.contains(event.relatedTarget)) setQuickNavigationOpen(false);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !floatingNavigation.hidden) {
+      setQuickNavigationOpen(false, true);
+    }
+  });
+
+  backToTop.addEventListener('click', event => {
+    event.preventDefault();
+    setQuickNavigationOpen(false);
+    setNavigationOpen(false);
+    siteHeader.querySelector('.school-brand').focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+  });
+
+  // Reading progress and section highlighting share one update per animation frame.
+  const quickLinks = [...floatingNavigation.querySelectorAll('a')];
+  const navigationItems = [...primaryNavigation.children].map(item => ({
+    element: item.matches('.nav-dropdown') ? item.querySelector('summary') : item,
+    route: (item.matches('a') ? item : item.querySelector('a')).hash.slice(1)
+  }));
+  const navigationGroups = {
+    'mission-vision-section': 'about-section',
+    'vice-president-section': 'principal-message',
+    'chairman-section': 'principal-message',
+    'why-ferrando': 'about-section',
+    'academic-pathways': 'wings-section',
+    'resources-section': 'admission-steps',
+    'visit-section': 'campus-visit-geo'
+  };
+  const sectionRoutes = [...document.querySelectorAll('main > section[id]')].map(section => ({
+    section,
+    route: section.id === 'student-portal' ? 'admission-steps' : section.id
+  })).filter(({ route }) => quickLinks.some(link => link.hash === `#${route}`));
+  let activeSection = '';
+  let scrollUpdatePending = false;
+
+  function updateReadingProgress() {
+    scrollUpdatePending = false;
+    const scrollRange = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = scrollRange > 0 ? Math.max(0, Math.min(window.scrollY / scrollRange, 1)) : 0;
+    document.documentElement.style.setProperty('--page-progress', progress.toFixed(4));
+    let current = 'home';
+    sectionRoutes.forEach(({ section, route }) => {
+      if (section.getBoundingClientRect().top <= window.innerHeight * 0.25) current = route;
+    });
+    if (current === activeSection) return;
+    activeSection = current;
+    primaryNavigation.querySelectorAll('[aria-current]').forEach(item => item.removeAttribute('aria-current'));
+    navigationItems.forEach(({ element, route }) => {
+      const active = route === (navigationGroups[current] || current);
+      element.classList.toggle('active', active);
+      if (active) element.setAttribute('aria-current', 'location');
+    });
+    quickLinks.forEach(link => {
+      if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+
+  function scheduleScrollUpdate() {
+    if (scrollUpdatePending) return;
+    scrollUpdatePending = true;
+    requestAnimationFrame(updateReadingProgress);
+  }
+
+  window.addEventListener('scroll', scheduleScrollUpdate, { passive: true });
+  window.addEventListener('resize', scheduleScrollUpdate);
+  window.addEventListener('load', scheduleScrollUpdate);
+  if ('ResizeObserver' in window) new ResizeObserver(scheduleScrollUpdate).observe(document.body);
+  scheduleScrollUpdate();
+
+  // K-12 Wings Tab Switching
+  function switchWing(targetId) {
+    const tabs = document.querySelectorAll('.wing-tab-btn');
+    tabs.forEach(btn => {
+      btn.setAttribute('aria-pressed', String(btn.getAttribute('data-target') === targetId));
+      btn.setAttribute('aria-controls', btn.getAttribute('data-target'));
+      if (btn.getAttribute('data-target') === targetId) {
+        btn.classList.remove('bg-white', 'text-slate-700', 'border');
+        btn.classList.add('bg-[#0B1B3D]', 'text-white', 'shadow');
+      } else {
+        btn.classList.remove('bg-[#0B1B3D]', 'text-white', 'shadow');
+        btn.classList.add('bg-white', 'text-slate-700', 'border');
+      }
+    });
+
+    const wings = document.querySelectorAll('.wing-content');
+    wings.forEach(wing => {
+      if (wing.id === targetId) {
+        wing.classList.remove('hidden');
+        wing.classList.add('grid');
+        wing.classList.add('is-revealed');
+      } else {
+        wing.classList.remove('grid');
+        wing.classList.add('hidden');
+      }
+    });
+  }
+
+  // Category filters and text search work together without reloading the page.
+  let currentNoticeCategory = 'all';
+  const noticeSearch = document.getElementById('notice-search');
+  document.getElementById('notice-search-tools').hidden = false;
+  function filterNotices(category, animate = true) {
+    currentNoticeCategory = category;
+    const query = noticeSearch.value.trim().toLocaleLowerCase();
+    const tabs = document.querySelectorAll('.notice-tab');
+    tabs.forEach(tab => {
+      tab.setAttribute('aria-pressed', String(tab.getAttribute('data-cat') === category));
+      if (tab.getAttribute('data-cat') === category) {
+        tab.classList.remove('bg-white', 'text-slate-700', 'border');
+        tab.classList.add('bg-[#0B1B3D]', 'text-white', 'shadow-md');
+      } else {
+        tab.classList.remove('bg-[#0B1B3D]', 'text-white', 'shadow-md');
+        tab.classList.add('bg-white', 'text-slate-700', 'border');
+      }
+    });
+
+    const items = document.querySelectorAll('.notice-item');
+    let visibleCount = 0;
+    items.forEach(item => {
+      item.getAnimations().forEach(animation => animation.cancel());
+      const matchesCategory = category === 'all' || item.classList.contains(category);
+      const matchesSearch = item.textContent.toLocaleLowerCase().includes(query);
+      if (matchesCategory && matchesSearch) {
+        item.style.display = 'flex';
+        if (animate && !reducedMotion.matches) {
+          item.animate([
+            { opacity: 0, transform: 'translateY(10px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+          ], { duration: 280, delay: visibleCount * 45, easing: 'ease-out' });
+        }
+        visibleCount++;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    document.getElementById('notice-results').textContent = `${visibleCount} of ${items.length} circulars shown`;
+    document.getElementById('notice-empty').hidden = visibleCount > 0;
+  }
+  noticeSearch.addEventListener('input', () => filterNotices(currentNoticeCategory));
+  filterNotices('all', false);
+  document.querySelectorAll('.wing-tab-btn').forEach(button => {
+    button.setAttribute('aria-controls', button.dataset.target);
+    button.setAttribute('aria-pressed', String(!document.getElementById(button.dataset.target).classList.contains('hidden')));
+  });
+
+  // Reveal every section and its cards as they enter the viewport.
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = [...document.querySelectorAll('main > section, footer')];
+    const counters = [...document.querySelectorAll('[data-counter]')];
+    const numberFormatter = new Intl.NumberFormat('en-IN');
+    const counted = new WeakSet();
+    const counterFrames = new WeakMap();
+    const revealElements = [...document.querySelectorAll('.reveal-on-scroll, main .interactive-card, main .wing-content, main .notice-item, main h2, footer h4')];
+
+    sections.forEach(section => {
+      section.classList.add('section-animated');
+      section.querySelector(':scope > .max-w-7xl')?.classList.add('section-content');
+    });
+
+    revealElements.forEach((element, index) => {
+      element.classList.add('reveal-on-scroll');
+      const delayClass = [...element.classList].find(name => /^delay-\d+$/.test(name));
+      const delay = delayClass ? Number(delayClass.slice(6)) : (element.classList.contains('interactive-card') ? index % 4 * 80 : 0);
+      element.style.setProperty('--reveal-delay', `${Math.min(delay, 320)}ms`);
+      if (element.matches('.interactive-card, .notice-item')) {
+        element.style.setProperty('--reveal-x', `${index % 2 ? 16 : -16}px`);
+        element.style.setProperty('--reveal-y', '18px');
+        element.style.setProperty('--reveal-scale', '0.97');
+        element.style.setProperty('--reveal-delay', `${index % 4 * 70}ms`);
+      }
+    });
+
+    function renderCounter(counter, value) {
+      counter.textContent = numberFormatter.format(value) + (counter.dataset.counterSuffix || '');
+    }
+
+    function animateCounter(counter) {
+      if (counted.has(counter)) return;
+      counted.add(counter);
+      const target = Number(counter.dataset.counter);
+      if (reducedMotion.matches) {
+        renderCounter(counter, target);
+        return;
+      }
+      const startedAt = performance.now();
+      function updateCounter(now) {
+        const progress = Math.min((now - startedAt) / 1600, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        renderCounter(counter, Math.floor(target * eased));
+        if (progress < 1 && !reducedMotion.matches) counterFrames.set(counter, requestAnimationFrame(updateCounter));
+        else {
+          counterFrames.delete(counter);
+          renderCounter(counter, target);
+        }
+      }
+      counterFrames.set(counter, requestAnimationFrame(updateCounter));
+    }
+
+    counters.forEach(counter => {
+      counter.setAttribute('aria-label', counter.textContent.trim());
+      renderCounter(counter, reducedMotion.matches ? Number(counter.dataset.counter) : 0);
+    });
+
+    if (!('IntersectionObserver' in window) || reducedMotion.matches) {
+      sections.forEach(section => section.classList.add('is-section-visible'));
+      revealElements.forEach(element => element.classList.add('is-revealed'));
+      counters.forEach(animateCounter);
+      return;
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const element = entry.target;
+        if (!entry.isIntersecting) {
+          // Reset only when the entire section leaves, using its stable layout
+          // box so animated cards cannot repeatedly trigger the observer.
+          if (element.matches('.section-animated')) {
+            element.classList.remove('is-section-visible');
+            element.querySelectorAll('.reveal-on-scroll').forEach(child => child.classList.remove('is-revealed'));
+            element.querySelectorAll('[data-counter]').forEach(counter => {
+              cancelAnimationFrame(counterFrames.get(counter));
+              counterFrames.delete(counter);
+              counted.delete(counter);
+              renderCounter(counter, 0);
+            });
+          }
+          return;
+        }
+        if (element.matches('.section-animated')) element.classList.add('is-section-visible');
+        if (element.matches('.reveal-on-scroll')) element.classList.add('is-revealed');
+        if (element.matches('[data-counter]')) animateCounter(element);
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+
+    document.documentElement.classList.add('motion-ready');
+    [...sections, ...revealElements, ...counters].forEach(element => observer.observe(element));
+
+    // Focused destinations stay visible when reached by keyboard or navigation links.
+    document.addEventListener('focusin', event => {
+      let element = event.target;
+      while (element && element !== document.body) {
+        if (element.matches('.reveal-on-scroll')) element.classList.add('is-revealed');
+        if (element.matches('.section-animated')) element.classList.add('is-section-visible');
+        element = element.parentElement;
+      }
+    });
+
+    reducedMotion.addEventListener('change', event => {
+      if (!event.matches) return;
+      sections.forEach(section => section.classList.add('is-section-visible'));
+      revealElements.forEach(element => element.classList.add('is-revealed'));
+      counters.forEach(counter => {
+        cancelAnimationFrame(counterFrames.get(counter));
+        counterFrames.delete(counter);
+        counted.add(counter);
+        renderCounter(counter, Number(counter.dataset.counter));
+      });
+      observer.disconnect();
+    });
+  });
+
+  // Seven local photos, advancing every two seconds while the banner is visible.
+  document.addEventListener('DOMContentLoaded', () => {
+    const slideshow = document.getElementById('hero-slideshow');
+    const controls = document.getElementById('slideshow-controls');
+    const slides = [...slideshow.querySelectorAll('.hero-slide')];
+    const dots = [...controls.querySelectorAll('.slideshow-dot')];
+    let currentSlide = 0;
+    let timer = null;
+    let isVisible = !('IntersectionObserver' in window);
+    let isHovered = false;
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === currentSlide;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+        dots[slideIndex].setAttribute('aria-current', String(active));
+      });
+      const slide = slides[currentSlide];
+      document.getElementById('slideshow-title').textContent = slide.dataset.title;
+      document.getElementById('slideshow-badge').textContent = slide.dataset.badge;
+      document.getElementById('slideshow-caption').textContent = slide.dataset.caption;
+    }
+
+    function updateAutoplay() {
+      clearInterval(timer);
+      timer = null;
+      const navigatingPhotos = controls.contains(document.activeElement);
+      if (reducedMotion.matches || !isVisible || isHovered || document.hidden || navigatingPhotos) return;
+      timer = setInterval(() => showSlide(currentSlide + 1), 2000);
+    }
+
+    function chooseSlide(index) {
+      showSlide(index);
+      updateAutoplay();
+    }
+
+    dots.forEach(dot => dot.addEventListener('click', () => chooseSlide(Number(dot.dataset.slide))));
+    controls.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'mouse') return;
+      isHovered = true;
+      updateAutoplay();
+    });
+    controls.addEventListener('pointerleave', event => {
+      if (event.pointerType !== 'mouse') return;
+      isHovered = false;
+      updateAutoplay();
+    });
+    controls.addEventListener('focusin', updateAutoplay);
+    controls.addEventListener('focusout', () => queueMicrotask(updateAutoplay));
+    document.addEventListener('visibilitychange', updateAutoplay);
+    reducedMotion.addEventListener('change', updateAutoplay);
+    if ('IntersectionObserver' in window) {
+      const slideshowObserver = new IntersectionObserver(entries => {
+        isVisible = entries[0].isIntersecting;
+        updateAutoplay();
+      }, { threshold: 0.15 });
+      slideshowObserver.observe(slideshow);
+    }
+    document.getElementById('slideshow-controls').hidden = false;
+    updateAutoplay();
+  });
+</script>
+<script src="Assets/site-enhancements.js" defer></script>
+</body></html>
