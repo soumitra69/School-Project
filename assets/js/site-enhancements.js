@@ -158,3 +158,54 @@ document.querySelectorAll('.footer-wing-button[data-wing]').forEach(link => {
     window.location.href = `mailto:admissions@sferrandosamsymper.edu.in?subject=${encodeURIComponent('School admission enquiry')}&body=${encodeURIComponent(body)}`;
   });
 })();
+
+// Header scroll elevation & glassmorphism trigger
+(() => {
+  const header = document.getElementById('site-header');
+  if (!header) return;
+  let ticking = false;
+  function updateHeaderState() {
+    ticking = false;
+    header.classList.toggle('is-scrolled', window.scrollY > 35);
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateHeaderState);
+      ticking = true;
+    }
+  }, { passive: true });
+  updateHeaderState();
+})();
+
+// Caption entrances share a compositor-friendly animation; no forced reflow.
+(() => {
+  const title = document.getElementById('slideshow-title');
+  const badge = document.getElementById('slideshow-badge');
+  const caption = document.getElementById('slideshow-caption');
+  if (!title || !badge || !caption) return;
+
+  const captionTargets = [title, badge, caption];
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const animations = new Set();
+  function cancelCaptionAnimations() {
+    animations.forEach(animation => animation.cancel());
+    animations.clear();
+  }
+  const observer = new MutationObserver(() => {
+    cancelCaptionAnimations();
+    if (motion.matches || document.hidden || typeof title.animate !== 'function') return;
+    captionTargets.forEach((el, index) => {
+      const animation = el.animate([
+        { opacity: 0, transform: 'translateY(6px)' },
+        { opacity: 1, transform: 'translateY(0)' }
+      ], { duration: 350, delay: index * 35, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+      animations.add(animation);
+      animation.onfinish = () => animations.delete(animation);
+    });
+  });
+  motion.addEventListener('change', cancelCaptionAnimations);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) cancelCaptionAnimations();
+  });
+  observer.observe(title, { childList: true, characterData: true, subtree: true });
+})();
